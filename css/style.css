@@ -7,8 +7,12 @@
 body {
   height: 100vh;
   font-family: "Josefin Sans", sans-serif;
+  color: royalblue;
 }
 
-h1 {
+.logo {
+  display: flex;
+}
+.logo h1 {
   font-weight: bold;
 }/*# sourceMappingURL=style.css.map */

@@ -7,8 +7,14 @@
 body {
 	height: 100vh;
 	font-family: 'Josefin Sans', sans-serif;
+	color: royalblue;
 }
 
-h1 {
-	font-weight: bold;
-}
+
+	.logo {
+		display: flex;
+		
+		h1 {
+			font-weight: bold;
+		}
+	}
