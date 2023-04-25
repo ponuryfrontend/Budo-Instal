@@ -2,43 +2,37 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-size: 10px;
+  list-style: none;
 }
 
 body {
   height: 100vh;
   font-family: "Titillium Web", sans-serif;
-  font-size: 2rem;
-  color: rgb(43, 63, 122);
+  font-size: 1.5rem;
 }
 
 .header-container {
-  position: relative;
-  padding: 25px;
-}
-.header-container .logo {
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
+  margin: 0 100px;
 }
-.header-container h1 {
-  font-size: 34px;
-  font-weight: bold;
-  text-transform: uppercase;
+.header-container .navigation {
+  height: 100%;
+  width: 100%;
 }
-
-.navigation .navigation-items {
+.header-container .navigation .navigation-items {
   display: flex;
   justify-content: space-around;
-  list-style: none;
-  background-color: rgb(43, 63, 122);
+  height: 100%;
+  background-color: rgb(40, 63, 132);
+  border-radius: 50px;
 }
-.navigation .navigation-items li {
+.header-container .navigation .navigation-items .nav-links {
+  height: 100%;
+  padding: 30px 50px;
   color: white;
-  font-size: 26px;
-  font-weight: 700;
   text-transform: uppercase;
-  padding: 15px;
+  font-weight: bold;
   cursor: pointer;
 }/*# sourceMappingURL=style.css.map */
