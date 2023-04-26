@@ -10,9 +10,9 @@ body {
 	font-size: 14px;
 }
 
-.header-container, .logo {
+.header-container, .logo, .nav-items {
 	display: flex;
-	justify-content: baseline;
+	justify-content: center;
 	align-items: center;
 }
 
@@ -39,12 +39,6 @@ body {
 	.nav, .nav-items, a {
 		height: 100%;
 		width: 100%;
-
-		.nav-items {
-			display: flex;
-			justify-content: center;
-			align-items: center;
-		}
 
 		a {
 			padding: 50px 50px;

@@ -10,9 +10,9 @@ body {
   font-size: 14px;
 }
 
-.header-container, .logo {
+.header-container, .logo, .nav-items {
   display: flex;
-  justify-content: baseline;
+  justify-content: center;
   align-items: center;
 }
 
@@ -36,11 +36,6 @@ body {
 .header-container .nav, .header-container .nav-items, .header-container a {
   height: 100%;
   width: 100%;
-}
-.header-container .nav .nav-items, .header-container .nav-items .nav-items, .header-container a .nav-items {
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 .header-container .nav a, .header-container .nav-items a, .header-container a a {
   padding: 50px 50px;
