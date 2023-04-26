@@ -10,18 +10,18 @@ body {
 	font-size: 14px;
 }
 
-.header-container {
+.header-container, .logo {
 	display: flex;
 	justify-content: baseline;
 	align-items: center;
+}
+
+.header-container {
 	background-color: rgb(175, 185, 234, 0.2);
 	overflow: hidden;
 
 	.logo {
-		display: flex;
 		flex-direction: column;
-		justify-content: center;
-		align-items: center;
 		height: 100%;
 		min-width: 200px;
 
@@ -36,7 +36,7 @@ body {
 		padding: 20px;
 	}
 
-	.nav, .nav-items {
+	.nav, .nav-items, a {
 		height: 100%;
 		width: 100%;
 
@@ -47,14 +47,13 @@ body {
 		}
 
 		a {
-			height: 100%;
 			padding: 50px 50px;
 			color: rgb(36, 58, 124);
 			font-weight: bold;
 			letter-spacing: 1px;
 			text-decoration: none;
 			text-transform: uppercase;
-			transition: 0.5s;
+			transition: 0.6s;
 			cursor: pointer;
 		}
 

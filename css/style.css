@@ -10,18 +10,18 @@ body {
   font-size: 14px;
 }
 
-.header-container {
+.header-container, .logo {
   display: flex;
   justify-content: baseline;
   align-items: center;
+}
+
+.header-container {
   background-color: rgba(175, 185, 234, 0.2);
   overflow: hidden;
 }
 .header-container .logo {
-  display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
   height: 100%;
   min-width: 200px;
 }
@@ -33,27 +33,26 @@ body {
 .header-container .nav {
   padding: 20px;
 }
-.header-container .nav, .header-container .nav-items {
+.header-container .nav, .header-container .nav-items, .header-container a {
   height: 100%;
   width: 100%;
 }
-.header-container .nav .nav-items, .header-container .nav-items .nav-items {
+.header-container .nav .nav-items, .header-container .nav-items .nav-items, .header-container a .nav-items {
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.header-container .nav a, .header-container .nav-items a {
-  height: 100%;
+.header-container .nav a, .header-container .nav-items a, .header-container a a {
   padding: 50px 50px;
   color: rgb(36, 58, 124);
   font-weight: bold;
   letter-spacing: 1px;
   text-decoration: none;
   text-transform: uppercase;
-  transition: 0.5s;
+  transition: 0.6s;
   cursor: pointer;
 }
-.header-container .nav a:hover, .header-container .nav-items a:hover {
+.header-container .nav a:hover, .header-container .nav-items a:hover, .header-container a a:hover {
   color: rgb(255, 255, 255);
   background-color: rgb(36, 58, 124);
 }/*# sourceMappingURL=style.css.map */
