@@ -6,37 +6,12 @@
 }
 
 body {
-	height: 100vh;
 	font-family: 'Titillium Web', sans-serif;
-	font-size: 1.5rem;
+	font-size: 16px;
 }
 
 .header-container {
 	display: flex;
 	justify-content: flex-start;
 	align-items: center;
-	margin: 0 100px;
-
-	.navigation {
-		height: 100%;
-		width: 100%;
-
-		.navigation-items {
-			display: flex;
-			justify-content: space-around;
-			height: 100%;
-			background-color: rgb(40, 63, 132);
-			border-radius: 50px;
-
-			.nav-links {
-				height: 100%;
-				padding: 30px 50px;
-				color: #ffff;
-				text-transform: uppercase;
-				font-weight: bold;
-				cursor: pointer;
-
-			}
-		}
-	}
 }

@@ -6,33 +6,12 @@
 }
 
 body {
-  height: 100vh;
   font-family: "Titillium Web", sans-serif;
-  font-size: 1.5rem;
+  font-size: 16px;
 }
 
 .header-container {
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  margin: 0 100px;
-}
-.header-container .navigation {
-  height: 100%;
-  width: 100%;
-}
-.header-container .navigation .navigation-items {
-  display: flex;
-  justify-content: space-around;
-  height: 100%;
-  background-color: rgb(40, 63, 132);
-  border-radius: 50px;
-}
-.header-container .navigation .navigation-items .nav-links {
-  height: 100%;
-  padding: 30px 50px;
-  color: white;
-  text-transform: uppercase;
-  font-weight: bold;
-  cursor: pointer;
 }/*# sourceMappingURL=style.css.map */
