@@ -12,6 +12,40 @@ body {
 
 .header-container {
   display: flex;
-  justify-content: flex-start;
+  justify-content: baseline;
   align-items: center;
+}
+.header-container .logo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  min-width: 250px;
+  padding: 20px;
+}
+.header-container .logo h1 {
+  color: rgb(36, 58, 124);
+}
+.header-container .logo .owner-name {
+  color: rgb(36, 58, 124);
+}
+.header-container .nav {
+  width: 100%;
+  margin: 0 30px;
+  padding: 5px 5px;
+  border-radius: 50px;
+  background-color: rgb(36, 58, 124);
+}
+.header-container .nav .nav-items {
+  display: flex;
+  justify-content: center;
+}
+.header-container .nav a {
+  padding: 0 50px;
+  color: rgb(255, 255, 255);
+  font-weight: bold;
+  letter-spacing: 2px;
+  text-decoration: none;
+  text-transform: uppercase;
 }/*# sourceMappingURL=style.css.map */
