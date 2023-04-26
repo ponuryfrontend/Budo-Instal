@@ -10,7 +10,9 @@ body {
   font-size: 14px;
 }
 
-.header-container, .logo, .nav-items {
+.header-container,
+.logo,
+.nav-items {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -33,11 +35,20 @@ body {
 .header-container .nav {
   padding: 20px;
 }
-.header-container .nav, .header-container .nav-items, .header-container a {
+.header-container .nav .wrapper {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1200px;
+}
+.header-container .nav .wrapper .nav,
+.header-container .nav .wrapper .nav-items,
+.header-container .nav .wrapper a {
   height: 100%;
   width: 100%;
 }
-.header-container .nav a, .header-container .nav-items a, .header-container a a {
+.header-container .nav .wrapper .nav a,
+.header-container .nav .wrapper .nav-items a,
+.header-container .nav .wrapper a a {
   padding: 50px 50px;
   color: rgb(36, 58, 124);
   font-weight: bold;
@@ -47,7 +58,9 @@ body {
   transition: 0.6s;
   cursor: pointer;
 }
-.header-container .nav a:hover, .header-container .nav-items a:hover, .header-container a a:hover {
+.header-container .nav .wrapper .nav a:hover,
+.header-container .nav .wrapper .nav-items a:hover,
+.header-container .nav .wrapper a a:hover {
   color: rgb(255, 255, 255);
   background-color: rgb(36, 58, 124);
 }/*# sourceMappingURL=style.css.map */
