@@ -1,90 +1,132 @@
 * {
-	box-sizing: border-box;
-	margin: 0;
-	padding: 0;
-	list-style: none;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
 
 body {
-	font-family: 'Crimson Text', serif;
-	font-size: 15px;
+  font-family: "Crimson Text", sans-serif;
+  font-size: 15px;
+  background-color: rgba(175, 185, 234, 0.2);
+}
+
+.header {
+  height: 100vh;
 }
 
 .info-bar {
-	display: flex;
-	justify-content: space-evenly;
-	width: 100%;
-	padding: 5px 10px;
-	background-color: rgba(36, 58, 124, 0.5);
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+  padding: 5px 10px;
+  background-color: rgba(36, 58, 124, 0.5);
 }
 .info-bar span,
 .info-bar a {
-	font-size: 12px;
-	text-transform: uppercase;
-	text-decoration: none;
-	padding: 5px 0;
-	color: rgb(31, 45, 90);
-	font-weight: 600;
+  font-size: 12px;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 5px 0;
+  color: rgb(31, 45, 90);
+  font-weight: 600;
 }
 
 .header-container {
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	width: 100%;
-	background-color: rgba(175, 185, 234, 0.2);
-	overflow: hidden;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  overflow: hidden;
 }
-
-.logo {
-	max-width: 150px;
-	height: 100%;
-	margin: 10px 10px 10px 50px;
-	padding: 10px;
+.header-container a {
+  height: 100%;
+  cursor: pointer;
+}
+.header-container a .logo {
+  max-width: 150px;
+  margin: 10px 10px 10px 50px;
+  padding: 10px;
 }
 
 .burger-icon {
-	height: 100%;
-	padding: 20px 36px;
-	background: none;
-	border: none;
-	font-size: 20px;
-	cursor: pointer;
-	transition: background-color 0.6s;
+  height: 100%;
+  padding: 20px 36px;
+  background: none;
+  border: none;
+  border-radius: 0 0 0 12px;
+  font-size: 20px;
+  cursor: pointer;
+  transition: background-color 0.6s;
 }
 
 .burger-icon:hover {
-	background-color: rgba(133, 140, 181, 0.149);
+  background-color: rgba(133, 140, 181, 0.149);
+  border-radius: 0 0 0 12px;
 }
 
 .nav-items {
-	display: none;
+  display: none;
 }
 
-@media (min-width: 776px) {
-	.info-bar {
-		display: none;
-	}
-	.burger-icon {
-		display: none;
-	}
-	.nav-items {
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		width: 100%;
-	}
-	.nav-items a {
-		padding: 20px 36px;
-		text-transform: uppercase;
-		letter-spacing: 1px;
-		font-weight: 600;
-		text-decoration: none;
-		color: rgb(31, 45, 90);
-		transition: 0.6s;
-	}
-	.nav-items a:hover {
-		color: rgb(255, 255, 255);
-		background-color: rgb(31, 45, 90);
-	}
-} /*# sourceMappingURL=style.css.map */
+.hero-banner {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50%;
+  width: 100%;
+}
+.hero-banner .hero-img {
+  position: absolute;
+  height: 50%;
+  width: 50%;
+  background-image: url("../img/pawel-czerwinski--RrO7cJN_sQ-unsplash.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 20px;
+}
+.hero-banner .background-img {
+  position: absolute;
+  background-color: rgb(31, 45, 90);
+}
+.hero-banner h1 {
+  position: absolute;
+  font-size: 26px;
+  color: rgb(31, 45, 90);
+  text-transform: uppercase;
+  padding: 0 30px;
+}
+
+@media (min-width: 810px) {
+  .info-bar {
+    display: none;
+  }
+  .burger-icon {
+    display: none;
+  }
+  .nav-items {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+  .nav-items .nav-item {
+    margin: 0 10px;
+  }
+  .nav-items a {
+    padding: 20px 36px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 600;
+    text-decoration: none;
+    border-radius: 0 0 12px 12px;
+    color: rgb(31, 45, 90);
+    transition: all 0.6s;
+  }
+  .nav-items a:hover {
+    color: rgb(255, 255, 255);
+    background-color: rgb(31, 45, 90);
+    border-radius: 0 0 12px 12px;
+  }
+}/*# sourceMappingURL=style.css.map */
