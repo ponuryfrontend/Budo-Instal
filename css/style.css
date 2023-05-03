@@ -19,7 +19,7 @@ body {
   display: flex;
   justify-content: space-evenly;
   width: 100%;
-  padding: 5px 10px;
+  padding: 10px;
   background-color: rgba(36, 58, 124, 0.5);
 }
 .info-bar span,
@@ -39,10 +39,6 @@ body {
   width: 100%;
   overflow: hidden;
 }
-.header-container a {
-  height: 100%;
-  cursor: pointer;
-}
 .header-container a .logo {
   max-width: 150px;
   margin: 10px 10px 10px 50px;
@@ -50,7 +46,6 @@ body {
 }
 
 .burger-icon {
-  height: 100%;
   padding: 20px 36px;
   background: none;
   border: none;

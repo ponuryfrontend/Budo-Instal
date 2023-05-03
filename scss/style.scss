@@ -23,7 +23,7 @@ body {
 	display: flex;
 	justify-content: space-evenly;
 	width: 100%;
-	padding: 5px 10px;
+	padding: 10px;
 	background-color: colors.$secondary-background-color;
 
 	span,
@@ -37,6 +37,8 @@ body {
 	}
 }
 
+// *** HEADER CONTAINER AND LOGO ***
+
 .header-container {
 	display: flex;
 	justify-content: space-between;
@@ -45,9 +47,6 @@ body {
 	overflow: hidden;
 
 	a {
-		height: 100%;
-		cursor: pointer;
-
 		.logo {
 			max-width: 150px;
 			margin: 10px 10px 10px 50px;
@@ -59,7 +58,6 @@ body {
 // *** MOBILE HAMBURGER MENU***
 
 .burger-icon {
-	height: 100%;
 	padding: 20px 36px;
 	background: none;
 	border: none;
