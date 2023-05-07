@@ -12,49 +12,101 @@
 body {
 	font-family: 'Crimson Text', sans-serif;
 	font-size: 15px;
+	color: colors.$main-font-color;
 	overflow-x: hidden;
 }
 
-.header {
-	height: 100vh;
+h1,
+h2,
+h3 {
+	color: colors.$main-font-color;
+}
+
+a {
+	text-decoration: none;
+}
+
+img {
+	height: auto;
+}
+
+button,
+select {
+	font-family: inherit;
+}
+
+button {
+	border: none;
+	cursor: pointer;
+}
+
+textarea {
+	resize: vertical;
+}
+
+.fixed {
+	position: fixed;
+	width: 100%;
+}
+
+.section-title {
+	margin: 0 25px;
+	padding: 25px;
+	font-size: 18px;
+	color: colors.$main-font-color;
+	text-transform: uppercase;
+	border-left: 5px solid colors.$main-font-color;
+}
+
+.privacy-policy {
+	margin: 0 25px;
+	color: colors.$main-font-color;
 }
 
 // // ***TOP INFO BAR***
 
-.info-bar {
-	display: flex;
-	justify-content: space-evenly;
+.contact-info {
 	width: 100%;
-	padding: 10px;
-	background-color: colors.$secondary-background-color;
 
-	span,
-	a {
-		font-size: 12px;
-		text-transform: uppercase;
-		text-decoration: none;
-		padding: 5px 0;
-		color: colors.$main-font-color;
-		font-weight: 600;
+	.info-bar {
+		display: flex;
+		justify-content: space-evenly;
+		width: 100%;
+		padding: 10px;
+		background-color: colors.$secondary-background-color;
+
+		span,
+		a {
+			font-size: 12px;
+			text-transform: uppercase;
+			text-decoration: none;
+			padding: 5px 0;
+			color: colors.$main-font-color;
+			font-weight: 600;
+		}
 	}
 }
 
 // // *** HEADER CONTAINER AND LOGO ***
 
-.header-container {
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
+.nav-bar {
 	width: 100%;
-	background-color: colors.$main-background-color;
-	border-bottom: 1px solid colors.$main-font-color;
-	overflow: hidden;
 
-	a {
-		.logo {
-			max-width: 150px;
-			margin: 10px 10px 10px 50px;
-			padding: 10px;
+	.nav-container {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		width: 100%;
+		background-color: colors.$main-background-color;
+		border-bottom: 1px solid colors.$main-font-color;
+		overflow: hidden;
+
+		a {
+			.logo {
+				max-width: 150px;
+				margin: 10px 10px 10px 50px;
+				padding: 10px;
+			}
 		}
 	}
 }
@@ -80,35 +132,96 @@ body {
 
 // // *** HERO BANNER ***
 
-.hero-banner {
-	position: relative;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	height: 50%;
+.header-container {
 	width: 100%;
+	height: 100vh;
+}
 
-	.hero-img {
-		position: absolute;
-		height: 50%;
-		width: 50%;
-		background-image: url('../img/pawel-czerwinski--RrO7cJN_sQ-unsplash.jpg');
-		background-position: center;
-		background-repeat: no-repeat;
-		border-radius: 20px;
-	}
+// *** CONTACT FORM ***
 
-	.background-img {
-		position: absolute;
-		background-color: colors.$main-font-color;
-	}
+.contact-section {
+	display: block;
+	background-color: colors.$main-background-color;
 
-	h1 {
-		position: absolute;
-		font-size: 26px;
-		color: colors.$main-font-color;
-		text-transform: uppercase;
-		padding: 0 30px;
+	.contact {
+		.contact-container {
+			margin: 0 auto;
+			padding: 0 1em;
+			width: 100%;
+			max-width: 1400px;
+
+			.contact-wrapper {
+				margin: 0 25px;
+
+				.brand-info {
+					position: relative;
+					margin-bottom: 25px;
+					overflow: hidden;
+
+					.brand-details {
+						padding: 25px;
+						height: 100%;
+
+						h3,
+						p {
+							padding: 5px;
+						}
+					}
+				}
+				.contact-form {
+					display: block;
+					padding: 0 25px;
+
+					.contact-box {
+						display: flex;
+						flex-direction: column;
+						position: relative;
+						width: 100%;
+
+						.contact-input {
+							margin-bottom: 18px;
+						}
+
+						.contact-textarea {
+							resize: vertical;
+							height: 100px;
+							min-height: 100px;
+						}
+
+						.contact-input,
+						.contact-textarea {
+							padding: 5px;
+							background: none;
+							border: 1px solid colors.$main-font-color;
+							border-radius: 4px;
+							outline: none;
+							color: colors.$main-font-color;
+							font-family: 'Crimson Text', sans-serif;
+							font-size: 16px;
+						}
+					}
+				}
+
+				.contact-btn {
+					margin-top: 18px;
+					padding: 5px;
+					font-size: 16px;
+					width: 100%;
+					color: #fff;
+					background-color: colors.$main-font-color;
+					border-radius: 8px;
+				}
+			}
+
+			.privacy-policy {
+				padding: 25px;
+
+				a {
+					font-weight: 600;
+					color: colors.$main-font-color;
+				}
+			}
+		}
 	}
 }
 
@@ -118,10 +231,9 @@ body {
 	width: 100%;
 	height: 100%;
 	background-color: colors.$main-background-color;
-	border-top: 1px solid colors.$main-font-color;
 
 	.legal-rules {
-		margin: 20px;
+		padding: 20px 50px;
 
 		.footer-logo {
 			display: none;
@@ -147,18 +259,17 @@ body {
 		.copyright {
 			margin-left: 5px;
 			padding: 10px;
-			color: colors.$main-font-color;
 			font-weight: 400;
 		}
 	}
 }
 
 @media (min-width: 810px) {
-	.info-bar {
+	.contact-info {
 		display: none;
 	}
 
-	.header-container {
+	.nav-container {
 		height: 62px;
 
 		.burger-icon {
@@ -189,9 +300,27 @@ body {
 		}
 	}
 
+	// *** CONTACT FORM ***
+
+	.contact-wrapper {
+		display: flex;
+	}
+
+	.brand-info {
+		margin-bottom: 0;
+		margin-right: 25px;
+		width: 30%;
+	}
+
+	.contact-form {
+		width: 70%;
+	}
+
 	// *** FOOTER ***
 
 	.footer-container {
+		margin: 0 auto;
+
 		.legal-rules {
 			display: flex;
 			flex-direction: row;
@@ -224,5 +353,15 @@ body {
 				padding: 10px;
 			}
 		}
+	}
+}
+
+@media (min-width: 1400px) {
+	// *** FOOTER ***
+
+	.footer-container {
+		display: flex;
+		justify-content: center;
+		align-items: center;
 	}
 }

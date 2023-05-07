@@ -5,29 +5,30 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Budo Instal - Hurtownia z materiałami wodociągowo kanalizacyjnymi</title>
+    <title>Budo Instal - Sprzedaż armatury wodociagowej i kanalizacyjnej zewnętrznej</title>
     <meta name="description"
-        content="Hurtownia z materiałami do budowy sieci wodociągowej oraz sieci kanalizacji sanitarnej">
+        content="Hurtownia prowadząca sprzedaż materiałów do budowy sieci wodociągowej, armatury wodociągowej, sieci kanalizacji zewnetrznej oraz żeliwa drogowego.">
     <meta name="keywords"
-        content="materiały wodociągowe, materiały kanalizacyjne, hydranty przeciwpożarowe, zasuwy kołnierzowe, włazy kanalizacyjne, rury pvc, rury pp, rury wodiciągowe, rury kanalizacyjne">
+        content="materiały wodociągowe, materiały kanalizacyjne, armatura wodociągowa, żeliwo drogowe, hydranty przeciwpożarowe, zasuwy kołnierzowe, włazy kanalizacyjne, rury pvc, rury pp, rury wodiciągowe, rury kanalizacyjne">
     <meta name="author" content="Tomasz Czyżewski">
     <link rel="shortcut icon" type="image/png" href="./img/budo-instal-website-favicon-color.png" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:wght@400;600;700&display=swap" rel="stylesheet">
-    <script src="https://kit.fontawesome.com/6f551a8353.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="./css/style.css">
+    <script src="https://kit.fontawesome.com/6f551a8353.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
-
-    <header>
-        <div class="header">
+    <div class="fixed">
+        <div class="contact-info">
             <div class="info-bar">
                 <span class="info-phone"><a href="tel:+48665026828">kontakt: +48 665 026 828</a></span>
                 <span class="info-email"><a href="mailto:biuro@budoinstal.eu">biuro@budoinstal.eu</a></span>
             </div>
-            <div class="header-container">
+        </div>
+        <nav class="nav-bar">
+            <div class="nav-container">
                 <a href="./index.html"><img src="./img/budo-instal-transparent-logo.png" alt="Logo firmy Budo Instal"
                         class="logo"></a>
                 <button class="burger-icon"><i class="fa-regular fa-bars" style="color: #1F2D5A;"></i></button>
@@ -38,9 +39,12 @@
                     <a class="nav-item" href="#">kontakt</a>
                 </nav>
             </div>
-            <div class="hero-banner">
+        </nav>
+    </div>
+    <header class="header-container">
+        <div class="hero-banner">
+            <div class="background-img">
                 <div class="hero-img"></div>
-                <div class="background-img"></div>
                 <h1>Materiały budowlane do sieci wodociągowej i kanalizacyjnej</h1>
             </div>
         </div>
@@ -48,12 +52,54 @@
 
     <main>
 
-        <section class="newsletter">
-            <div class="newsletter-container">
-                <h2 class="section-title">newsletter</h2>
-                <p class="get-email-text">Zapisz się do naszego newslettera</p>
+        <section class="contact-section">
+            <div class="contact">
+                <div class="contact-container">
+                    <h2 class="section-title">Kontakt</h2>
+                    <div class="contact-wrapper">
+                        <div class="brand-info">
+                            <div class="brand-details">
+                                <h3>Budo Instal</h3>
+                                <p>Firma specjalizująca się w sprzedaży armatury wodociągowej, materiałów
+                                    kanalizacji
+                                    zewnętrznej oraz żeliwa drogowego. Zespół pracowników z ponad 20-letnim
+                                    doświadczeniem zawodowym. Jedna z
+                                    najdłużej działających firm z branży na polskim rynku.</p>
+                            </div>
+                        </div>
+                        <form action="mail.php" method="POST" class="contact-form">
+                            <div class="contact-box">
+                                <input type="text" id="contact-name" class="contact-input" name="contact-first-name"
+                                    placeholder="Imię" focus required="">
+                            </div>
+                            <div class="contact-box">
+                                <input type="text" id="contact-last-name" class="contact-input" name="contact-last-name"
+                                    placeholder="Nazwisko" required="">
+                            </div>
+                            <div class="contact-box">
+                                <input type="email" id="contact-email" class="contact-input" name="contact-email"
+                                    placeholder="E-mail" required="">
+                            </div>
+                            <div class="contact-box">
+                                <input type="tel" id="contact-phone" class="contact-input" name="contact-phone"
+                                    placeholder="Numer telefonu">
+                            </div>
+                            <div class="contact-box">
+                                <textarea name="contact-msg" class="contact-textarea" id="contact-msg" cols="30"
+                                    rows="10" placeholder="Tresć wiadomości" required=""></textarea>
+                            </div>
+                            <button class="contact-btn" type="submit" name="contact-submit">Wyślij</button>
+                        </form>
+                    </div>
+                    <p class="privacy-policy">Uzupełnienie formularza oznacza, że podane w nim dane osobowe będą
+                        wykorzystywane oraz
+                        przetwarzane w celu udzielenia odpowiedzi. Jeśli Twoje zapytanie będzie związane z zakresem
+                        naszych usług, w odpowiedzi możemy przedstawić Ci ofertę. <a href="#">Dowiedz
+                            się, jak przetwarzamy Twoje dane.</a></p>
+                </div>
             </div>
         </section>
+
     </main>
     <footer>
         <div class="footer-container">
