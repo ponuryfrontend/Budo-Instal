@@ -14,10 +14,23 @@ body {
   overflow-x: hidden;
 }
 
+::-moz-placeholder {
+  color: rgb(31, 45, 90);
+}
+
 h1,
 h2,
-h3 {
+h3,
+::placeholder {
   color: rgb(31, 45, 90);
+}
+
+::-moz-placeholder {
+  padding: 0 5px;
+}
+
+::placeholder {
+  padding: 0 5px;
 }
 
 a {
@@ -48,16 +61,16 @@ textarea {
 }
 
 .section-title {
-  margin: 0 25px;
-  padding: 25px;
+  margin: 0 15px;
+  padding: 25px 15px;
   font-size: 18px;
   color: rgb(31, 45, 90);
   text-transform: uppercase;
-  border-left: 5px solid rgb(31, 45, 90);
+  border-left: 3px solid rgb(31, 45, 90);
 }
 
 .privacy-policy {
-  margin: 0 25px;
+  margin: 0 15px;
   color: rgb(31, 45, 90);
 }
 
@@ -132,41 +145,43 @@ textarea {
   max-width: 1400px;
 }
 .contact-section .contact .contact-container .contact-wrapper {
-  margin: 0 25px;
+  margin: 0 15px;
 }
 .contact-section .contact .contact-container .contact-wrapper .brand-info {
-  position: relative;
-  margin-bottom: 25px;
+  margin-bottom: 5px;
   overflow: hidden;
 }
 .contact-section .contact .contact-container .contact-wrapper .brand-info .brand-details {
-  padding: 25px;
+  padding: 15px;
   height: 100%;
 }
 .contact-section .contact .contact-container .contact-wrapper .brand-info .brand-details h3,
 .contact-section .contact .contact-container .contact-wrapper .brand-info .brand-details p {
   padding: 5px;
 }
-.contact-section .contact .contact-container .contact-wrapper .contact-form {
+.contact-section .contact .contact-container .contact-wrapper .form-container {
   display: block;
-  padding: 0 25px;
+  padding: 0 15px;
 }
-.contact-section .contact .contact-container .contact-wrapper .contact-form .contact-box {
+.contact-section .contact .contact-container .contact-wrapper .form-container h3 {
+  margin: 0 auto;
+  padding: 25px 0;
+}
+.contact-section .contact .contact-container .contact-wrapper .form-container .contact-form .contact-box {
   display: flex;
   flex-direction: column;
-  position: relative;
   width: 100%;
 }
-.contact-section .contact .contact-container .contact-wrapper .contact-form .contact-box .contact-input {
+.contact-section .contact .contact-container .contact-wrapper .form-container .contact-form .contact-box .contact-input {
   margin-bottom: 18px;
 }
-.contact-section .contact .contact-container .contact-wrapper .contact-form .contact-box .contact-textarea {
+.contact-section .contact .contact-container .contact-wrapper .form-container .contact-form .contact-box .contact-textarea {
   resize: vertical;
   height: 100px;
   min-height: 100px;
 }
-.contact-section .contact .contact-container .contact-wrapper .contact-form .contact-box .contact-input,
-.contact-section .contact .contact-container .contact-wrapper .contact-form .contact-box .contact-textarea {
+.contact-section .contact .contact-container .contact-wrapper .form-container .contact-form .contact-box .contact-input,
+.contact-section .contact .contact-container .contact-wrapper .form-container .contact-form .contact-box .contact-textarea {
   padding: 5px;
   background: none;
   border: 1px solid rgb(31, 45, 90);
@@ -183,10 +198,17 @@ textarea {
   width: 100%;
   color: #fff;
   background-color: rgb(31, 45, 90);
+  border: 1px solid rgb(31, 45, 90);
   border-radius: 8px;
+  transition: all 0.5s;
+}
+.contact-section .contact .contact-container .contact-wrapper .contact-btn:hover {
+  background-color: rgb(147, 157, 187);
+  color: rgb(31, 45, 90);
+  border: 1px solid rgb(31, 45, 90);
 }
 .contact-section .contact .contact-container .privacy-policy {
-  padding: 25px;
+  padding: 35px 15px;
 }
 .contact-section .contact .contact-container .privacy-policy a {
   font-weight: 600;
@@ -199,7 +221,7 @@ textarea {
   background-color: rgb(239, 241, 250);
 }
 .footer-container .legal-rules {
-  padding: 20px 50px;
+  padding: 20px 30px;
 }
 .footer-container .legal-rules .footer-logo {
   display: none;
@@ -258,13 +280,17 @@ textarea {
   .contact-wrapper {
     display: flex;
   }
+  .contact-wrapper .form-container {
+    display: flex;
+    width: 70%;
+  }
   .brand-info {
     margin-bottom: 0;
     margin-right: 25px;
     width: 30%;
   }
   .contact-form {
-    width: 70%;
+    width: 100%;
   }
   .footer-container {
     margin: 0 auto;

@@ -18,8 +18,13 @@ body {
 
 h1,
 h2,
-h3 {
+h3,
+::placeholder {
 	color: colors.$main-font-color;
+}
+
+::placeholder {
+	padding: 0 5px;
 }
 
 a {
@@ -50,16 +55,16 @@ textarea {
 }
 
 .section-title {
-	margin: 0 25px;
-	padding: 25px;
+	margin: 0 15px;
+	padding: 25px 15px;
 	font-size: 18px;
 	color: colors.$main-font-color;
 	text-transform: uppercase;
-	border-left: 5px solid colors.$main-font-color;
+	border-left: 3px solid colors.$main-font-color;
 }
 
 .privacy-policy {
-	margin: 0 25px;
+	margin: 0 15px;
 	color: colors.$main-font-color;
 }
 
@@ -151,15 +156,14 @@ textarea {
 			max-width: 1400px;
 
 			.contact-wrapper {
-				margin: 0 25px;
+				margin: 0 15px;
 
 				.brand-info {
-					position: relative;
-					margin-bottom: 25px;
+					margin-bottom: 5px;
 					overflow: hidden;
 
 					.brand-details {
-						padding: 25px;
+						padding: 15px;
 						height: 100%;
 
 						h3,
@@ -168,36 +172,44 @@ textarea {
 						}
 					}
 				}
-				.contact-form {
+
+				.form-container {
 					display: block;
-					padding: 0 25px;
+					padding: 0 15px;
 
-					.contact-box {
-						display: flex;
-						flex-direction: column;
-						position: relative;
-						width: 100%;
+					h3 {
+						margin: 0 auto;
+						padding: 25px 0;
+					}
 
-						.contact-input {
-							margin-bottom: 18px;
-						}
+					.contact-form {
 
-						.contact-textarea {
-							resize: vertical;
-							height: 100px;
-							min-height: 100px;
-						}
+						.contact-box {
+							display: flex;
+							flex-direction: column;
+							width: 100%;
 
-						.contact-input,
-						.contact-textarea {
-							padding: 5px;
-							background: none;
-							border: 1px solid colors.$main-font-color;
-							border-radius: 4px;
-							outline: none;
-							color: colors.$main-font-color;
-							font-family: 'Crimson Text', sans-serif;
-							font-size: 16px;
+							.contact-input {
+								margin-bottom: 18px;
+							}
+
+							.contact-textarea {
+								resize: vertical;
+								height: 100px;
+								min-height: 100px;
+							}
+
+							.contact-input,
+							.contact-textarea {
+								padding: 5px;
+								background: none;
+								border: 1px solid colors.$main-font-color;
+								border-radius: 4px;
+								outline: none;
+								color: colors.$main-font-color;
+								font-family: 'Crimson Text', sans-serif;
+								font-size: 16px;
+							}
 						}
 					}
 				}
@@ -209,12 +221,20 @@ textarea {
 					width: 100%;
 					color: #fff;
 					background-color: colors.$main-font-color;
+					border: 1px solid colors.$main-font-color;
 					border-radius: 8px;
+					transition: all 0.5s;
+				}
+
+				.contact-btn:hover {
+					background-color: colors.$secondary-background-color;
+					color: colors.$main-font-color;
+					border: 1px solid colors.$main-font-color;
 				}
 			}
 
 			.privacy-policy {
-				padding: 25px;
+				padding: 35px 15px;
 
 				a {
 					font-weight: 600;
@@ -233,7 +253,7 @@ textarea {
 	background-color: colors.$main-background-color;
 
 	.legal-rules {
-		padding: 20px 50px;
+		padding: 20px 30px;
 
 		.footer-logo {
 			display: none;
@@ -304,6 +324,11 @@ textarea {
 
 	.contact-wrapper {
 		display: flex;
+
+		.form-container {
+			display: flex;
+			width: 70%;
+		}
 	}
 
 	.brand-info {
@@ -313,7 +338,7 @@ textarea {
 	}
 
 	.contact-form {
-		width: 70%;
+		width: 100%;
 	}
 
 	// *** FOOTER ***

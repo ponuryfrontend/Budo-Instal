@@ -67,29 +67,32 @@
                                     najdłużej działających firm z branży na polskim rynku.</p>
                             </div>
                         </div>
-                        <form action="mail.php" method="POST" class="contact-form">
-                            <div class="contact-box">
-                                <input type="text" id="contact-name" class="contact-input" name="contact-first-name"
-                                    placeholder="Imię" focus required="">
-                            </div>
-                            <div class="contact-box">
-                                <input type="text" id="contact-last-name" class="contact-input" name="contact-last-name"
-                                    placeholder="Nazwisko" required="">
-                            </div>
-                            <div class="contact-box">
-                                <input type="email" id="contact-email" class="contact-input" name="contact-email"
-                                    placeholder="E-mail" required="">
-                            </div>
-                            <div class="contact-box">
-                                <input type="tel" id="contact-phone" class="contact-input" name="contact-phone"
-                                    placeholder="Numer telefonu">
-                            </div>
-                            <div class="contact-box">
-                                <textarea name="contact-msg" class="contact-textarea" id="contact-msg" cols="30"
-                                    rows="10" placeholder="Tresć wiadomości" required=""></textarea>
-                            </div>
-                            <button class="contact-btn" type="submit" name="contact-submit">Wyślij</button>
-                        </form>
+                        <div class="form-container">
+                            <h3>Prześlij do nas zapytanie:</h3>
+                            <form action="mail.php" method="POST" class="contact-form">
+                                <div class="contact-box">
+                                    <input type="text" id="contact-name" class="contact-input" name="contact-first-name"
+                                        placeholder="Imię" focus required="">
+                                </div>
+                                <div class="contact-box">
+                                    <input type="text" id="contact-last-name" class="contact-input" name="contact-last-name"
+                                        placeholder="Nazwisko" required="">
+                                </div>
+                                <div class="contact-box">
+                                    <input type="email" id="contact-email" class="contact-input" name="contact-email"
+                                        placeholder="E-mail" required="">
+                                </div>
+                                <div class="contact-box">
+                                    <input type="tel" id="contact-phone" class="contact-input" name="contact-phone"
+                                        placeholder="Numer telefonu">
+                                </div>
+                                <div class="contact-box">
+                                    <textarea name="contact-msg" class="contact-textarea" id="contact-msg" cols="30"
+                                        rows="10" placeholder="Tresć wiadomości" required=""></textarea>
+                                </div>
+                                <button class="contact-btn" type="submit" name="contact-submit">Wyślij wiadomość</button>
+                            </form>
+                        </div>
                     </div>
                     <p class="privacy-policy">Uzupełnienie formularza oznacza, że podane w nim dane osobowe będą
                         wykorzystywane oraz
