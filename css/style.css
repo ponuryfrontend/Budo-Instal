@@ -7,6 +7,10 @@
   list-style: none;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: "Crimson Text", sans-serif;
   font-size: 15px;
@@ -63,9 +67,8 @@ textarea {
 .section-title {
   margin: 0 15px;
   padding: 25px 15px;
-  font-size: 18px;
+  font-size: 22px;
   color: rgb(31, 45, 90);
-  text-transform: uppercase;
   border-left: 3px solid rgb(31, 45, 90);
 }
 
@@ -96,33 +99,18 @@ textarea {
 
 .nav-bar {
   width: 100%;
+  height: auto;
 }
 .nav-bar .nav-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 100%;
-  background-color: rgb(239, 241, 250);
-  border-bottom: 1px solid rgb(31, 45, 90);
   overflow: hidden;
 }
 .nav-bar .nav-container a .logo {
   max-width: 150px;
   margin: 10px 10px 10px 50px;
   padding: 10px;
-}
-
-.burger-icon {
-  padding: 20px 36px;
-  background: none;
-  border: none;
-  font-size: 20px;
-  cursor: pointer;
-  transition: background-color 0.6s;
-}
-
-.burger-icon:hover {
-  background-color: rgba(133, 140, 181, 0.149);
 }
 
 .nav-items {
@@ -136,6 +124,7 @@ textarea {
 
 .contact-section {
   display: block;
+  padding: 25px 0;
   background-color: rgb(239, 241, 250);
 }
 .contact-section .contact .contact-container {
@@ -158,6 +147,7 @@ textarea {
 .contact-section .contact .contact-container .contact-wrapper .brand-info .brand-details h3,
 .contact-section .contact .contact-container .contact-wrapper .brand-info .brand-details p {
   padding: 5px;
+  line-height: 20px;
 }
 .contact-section .contact .contact-container .contact-wrapper .form-container {
   display: block;
@@ -207,8 +197,25 @@ textarea {
   color: rgb(31, 45, 90);
   border: 1px solid rgb(31, 45, 90);
 }
+.contact-section .contact .contact-container .contact-wrapper .newsletter-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-top: 15px;
+}
+.contact-section .contact .contact-container .contact-wrapper .newsletter-container input[type=checkbox] {
+  background-color: #fff;
+  font: inherit;
+  width: 1.15em;
+  height: 1.15em;
+}
+.contact-section .contact .contact-container .contact-wrapper .newsletter-container .subscription {
+  padding-left: 15px;
+  font-size: 16px;
+}
 .contact-section .contact .contact-container .privacy-policy {
   padding: 35px 15px;
+  line-height: 22px;
 }
 .contact-section .contact .contact-container .privacy-policy a {
   font-weight: 600;
@@ -254,7 +261,7 @@ textarea {
   .nav-container {
     height: 62px;
   }
-  .nav-container .burger-icon {
+  .nav-container .hamburger {
     display: none;
   }
   .nav-container .nav-items {

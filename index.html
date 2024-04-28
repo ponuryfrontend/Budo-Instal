@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Budo Instal - Sprzedaż armatury wodociagowej i kanalizacyjnej zewnętrznej</title>
+    <title>Budo Instal - Sprzedawca hurtowy armatury wodociagowej i kanalizacyjnej zewnętrznej</title>
     <meta name="description"
         content="Hurtownia prowadząca sprzedaż materiałów do budowy sieci wodociągowej, armatury wodociągowej, sieci kanalizacji zewnetrznej oraz żeliwa drogowego.">
     <meta name="keywords"
@@ -15,8 +15,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="./css/hamburgers.css" rel="stylesheet">
     <link rel="stylesheet" href="./css/style.css">
-    <script src="https://kit.fontawesome.com/6f551a8353.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -31,12 +31,15 @@
             <div class="nav-container">
                 <a href="./index.html"><img src="./img/budo-instal-transparent-logo.png" alt="Logo firmy Budo Instal"
                         class="logo"></a>
-                <button class="burger-icon"><i class="fa-regular fa-bars" style="color: #1F2D5A;"></i></button>
+                <button class="hamburger hamburger--collapse" type="button">
+                    <span class="hamburger-box">
+                        <span class="hamburger-inner"></span>
+                    </span>
+                </button>
                 <nav class="nav-items">
-                    <a class="nav-item" href="#">home</a>
                     <a class="nav-item" href="#">oferta</a>
                     <a class="nav-item" href="#">o nas</a>
-                    <a class="nav-item" href="#">kontakt</a>
+                    <a class="nav-item" href="#contact">kontakt</a>
                 </nav>
             </div>
         </nav>
@@ -52,7 +55,10 @@
 
     <main>
 
-        <section class="contact-section">
+
+
+
+        <section class="contact-section" id="contact">
             <div class="contact">
                 <div class="contact-container">
                     <h2 class="section-title">Kontakt</h2>
@@ -62,21 +68,22 @@
                                 <h3>Budo Instal</h3>
                                 <p>Firma specjalizująca się w sprzedaży armatury wodociągowej, materiałów
                                     kanalizacji
-                                    zewnętrznej oraz żeliwa drogowego. Zespół pracowników z ponad 20-letnim
+                                    zewnętrznej oraz żeliwa drogowego.</p>
+                                <p>Zespół pracowników z ponad 20-letnim
                                     doświadczeniem zawodowym. Jedna z
                                     najdłużej działających firm z branży na polskim rynku.</p>
                             </div>
                         </div>
                         <div class="form-container">
                             <h3>Prześlij do nas zapytanie:</h3>
-                            <form action="mail.php" method="POST" class="contact-form">
+                            <form action="#" method="POST" class="contact-form">
                                 <div class="contact-box">
                                     <input type="text" id="contact-name" class="contact-input" name="contact-first-name"
                                         placeholder="Imię" focus required="">
                                 </div>
                                 <div class="contact-box">
-                                    <input type="text" id="contact-last-name" class="contact-input" name="contact-last-name"
-                                        placeholder="Nazwisko" required="">
+                                    <input type="text" id="contact-last-name" class="contact-input"
+                                        name="contact-last-name" placeholder="Nazwisko" required="">
                                 </div>
                                 <div class="contact-box">
                                     <input type="email" id="contact-email" class="contact-input" name="contact-email"
@@ -88,9 +95,14 @@
                                 </div>
                                 <div class="contact-box">
                                     <textarea name="contact-msg" class="contact-textarea" id="contact-msg" cols="30"
-                                        rows="10" placeholder="Tresć wiadomości" required=""></textarea>
+                                        rows="10" placeholder="Treść wiadomości" required=""></textarea>
                                 </div>
-                                <button class="contact-btn" type="submit" name="contact-submit">Wyślij wiadomość</button>
+                                <button class="contact-btn" type="submit" name="contact-submit">Wyślij
+                                    wiadomość</button>
+                                <div class="newsletter-container">
+                                    <input type="checkbox" name="subscription" value="Newsletter">
+                                    <p class="subscription">Zapisz się na nasz newsletter</p>
+                                </div>
                             </form>
                         </div>
                     </div>
@@ -120,6 +132,30 @@
             </div>
         </div>
     </footer>
+    <script src="https://www.google.com/recaptcha/api.js"></script>
+    <script>
+        /**
+         * forEach implementation for Objects/NodeLists/Arrays, automatic type loops and context options
+         *
+         * @private
+         * @author Todd Motto
+         * @link https://github.com/toddmotto/foreach
+         * @param {Array|Object|NodeList} collection - Collection of items to iterate, could be an Array, Object or NodeList
+         * @callback requestCallback      callback   - Callback function for each iteration.
+         * @param {Array|Object|NodeList} scope=null - Object/NodeList/Array that forEach is iterating over, to use as the this value when executing callback.
+         * @returns {}
+         */
+        var forEach = function (t, o, r) { if ("[object Object]" === Object.prototype.toString.call(t)) for (var c in t) Object.prototype.hasOwnProperty.call(t, c) && o.call(r, t[c], c, t); else for (var e = 0, l = t.length; l > e; e++)o.call(r, t[e], e, t) };
+
+        var hamburgers = document.querySelectorAll(".hamburger");
+        if (hamburgers.length > 0) {
+            forEach(hamburgers, function (hamburger) {
+                hamburger.addEventListener("click", function () {
+                    this.classList.toggle("is-active");
+                }, false);
+            });
+        }
+    </script>
     <script src="./js/script.js"></script>
 </body>
 

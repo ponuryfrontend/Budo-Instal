@@ -9,6 +9,10 @@
 	list-style: none;
 }
 
+html {
+	scroll-behavior: smooth;
+}
+
 body {
 	font-family: 'Crimson Text', sans-serif;
 	font-size: 15px;
@@ -57,9 +61,8 @@ textarea {
 .section-title {
 	margin: 0 15px;
 	padding: 25px 15px;
-	font-size: 18px;
+	font-size: 22px;
 	color: colors.$main-font-color;
-	text-transform: uppercase;
 	border-left: 3px solid colors.$main-font-color;
 }
 
@@ -96,14 +99,13 @@ textarea {
 
 .nav-bar {
 	width: 100%;
+	height: auto;
 
 	.nav-container {
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
-		width: 100%;
-		background-color: colors.$main-background-color;
-		border-bottom: 1px solid colors.$main-font-color;
+		// background-color: colors.$main-background-color;
 		overflow: hidden;
 
 		a {
@@ -117,19 +119,6 @@ textarea {
 }
 
 // // *** MOBILE HAMBURGER MENU***
-
-.burger-icon {
-	padding: 20px 36px;
-	background: none;
-	border: none;
-	font-size: 20px;
-	cursor: pointer;
-	transition: background-color 0.6s;
-}
-
-.burger-icon:hover {
-	background-color: rgba(133, 140, 181, 0.149);
-}
 
 .nav-items {
 	display: none;
@@ -146,6 +135,7 @@ textarea {
 
 .contact-section {
 	display: block;
+	padding: 25px 0;
 	background-color: colors.$main-background-color;
 
 	.contact {
@@ -169,6 +159,7 @@ textarea {
 						h3,
 						p {
 							padding: 5px;
+							line-height: 20px;
 						}
 					}
 				}
@@ -183,7 +174,6 @@ textarea {
 					}
 
 					.contact-form {
-
 						.contact-box {
 							display: flex;
 							flex-direction: column;
@@ -231,10 +221,30 @@ textarea {
 					color: colors.$main-font-color;
 					border: 1px solid colors.$main-font-color;
 				}
+
+				.newsletter-container {
+					display: flex;
+					flex-direction: row;
+					align-items: center;
+					margin-top: 15px;
+
+					input[type='checkbox'] {
+						background-color: #fff;
+						font: inherit;
+						width: 1.15em;
+						height: 1.15em;
+					}
+
+					.subscription {
+						padding-left: 15px;
+						font-size: 16px;
+					}
+				}
 			}
 
 			.privacy-policy {
 				padding: 35px 15px;
+				line-height: 22px;
 
 				a {
 					font-weight: 600;
@@ -292,7 +302,7 @@ textarea {
 	.nav-container {
 		height: 62px;
 
-		.burger-icon {
+		.hamburger {
 			display: none;
 		}
 
