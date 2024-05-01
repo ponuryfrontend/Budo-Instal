@@ -17,7 +17,7 @@ body {
 	font-family: 'Crimson Text', sans-serif;
 	font-size: 15px;
 	color: colors.$main-font-color;
-	overflow-x: hidden;
+	// overflow-x: hidden;
 }
 
 h1,
@@ -53,11 +53,6 @@ textarea {
 	resize: vertical;
 }
 
-.fixed {
-	position: sticky;
-	width: 100%;
-}
-
 .section-title {
 	margin: 0 15px;
 	padding: 25px 15px;
@@ -75,115 +70,67 @@ textarea {
 	overflow: hidden;
 }
 
-.showup {
-	display: flex;
-	left: 0%;
+.container {
+	margin: 0 auto;
+	width: 100%;
+	max-width: 1400px;
 }
 
 .header {
 	position: relative;
-	height: 100vh;
-	width: 100%;
 	background-color: colors.$main-background-color;
-	overflow: hidden;
 
-	&__nav-mobile {
-		display: flex;
-		position: absolute;
-		flex-direction: column;
-		justify-content: center;
-		align-items: center;
-		width: 100%;
-		height: 100vh;
-		background-color: colors.$main-background-color;
-		opacity: 0;
-		transform: translateX(-100%);
-		transition: opacity ease-in-out 1s;
-		overflow: hidden;
-
-		&--active {
-			transition: opacity ease-in-out 1s;
-			transform: translateX(0);
-			opacity: 1;
-		}
-	}
-
-	&__nav-desktop {
-		display: none;
-	}
-
-	&__nav-item {
-		padding: 0.5em;
-		margin: 0.5em 0;
-		font-size: 1.6rem;
-		color: colors.$main-font-color;
-		text-transform: uppercase;
-		letter-spacing: 0.1em;
-	}
-
-	&__info-box {
-		width: 100%;
-	}
-
-	&__info-bar {
-		display: flex;
-		justify-content: space-evenly;
-		width: 100%;
-		padding: 10px;
-		background-color: colors.$secondary-background-color;
-	}
-
-	&__info-phone,
-	&__info-email {
-		font-size: 12px;
-		text-transform: uppercase;
-		text-decoration: none;
-		padding: 5px 0;
-		color: colors.$main-font-color;
-		font-weight: 600;
-	}
-
-	&__nav-box {
+	&__box {
+		position: fixed;
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
+		margin: 0 auto;
 		width: 100%;
+		max-width: 1400px;
 		background-color: colors.$main-background-color;
-		overflow: hidden;
+		// z-index: 10;
 	}
-
-	&__nav-logo {
+	
+	&__logo {
 		max-width: 150px;
 		margin: 10px 10px 10px 15px;
 		padding: 10px;
 	}
-
-	&__offer-box {
-		display: grid;
-		height: auto;
-		width: 100%;
-		padding: 2em;
+	
+	&__nav-desktop {
+		display: none;
 	}
-
-	&__single-offer {
-		width: 100px;
-		height: 100px;
-		margin: 1em;
-		background-color: rgb(181, 53, 53);
-	}
-}
-
-// // *** MOBILE HAMBURGER MENU***
-
-.nav-desktop {
-	display: none;
 }
 
 .nav-mobile {
-	position: absolute;
-	width: 100%;
+	position: fixed;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
 	height: 100vh;
-	background-color: aqua;
+	width: 100%;
+	top: 0;
+	transform: translate(-110%);
+	opacity: 0;
+	background-color: colors.$main-background-color;
+	transition: opacity ease-in-out 1s;
+	// z-index: 11;
+
+	&--active {
+		transform: translate(0);
+		opacity: 1;
+	}
+
+	&__item {
+		padding: 0.5em;
+		margin: 0.5em 0;
+		font-size: 1.5rem;
+		font-weight: bold;
+		color: colors.$main-font-color;
+		text-transform: capitalize;
+	}
 }
 
 // *** CONTACT FORM ***
@@ -350,39 +297,26 @@ textarea {
 }
 
 @media (min-width: 810px) {
-	.contact-info {
-		display: none;
-	}
-
-	.nav-container {
-		height: 62px;
-
-		.hamburger {
+	.header {
+		&__nav-mobile {
 			display: none;
 		}
 
-		.nav-items {
-			display: flex;
-			justify-content: center;
-			align-items: center;
-			width: 100%;
-
-			a {
-				padding: 20px 36px;
-				height: 62px;
-				text-transform: uppercase;
-				letter-spacing: 1px;
-				font-weight: 600;
-				text-decoration: none;
-				color: colors.$main-font-color;
-				transition: all 0.6s;
-			}
-
-			a:hover {
-				color: rgb(255, 255, 255);
-				background-color: colors.$main-font-color;
-			}
+		&__info-box {
+			display: none;
 		}
+
+		&__nav-desktop {
+			display: flex;
+		}
+	}
+
+	.hamburger {
+		display: none;
+	}
+
+	.contact-info {
+		display: none;
 	}
 
 	// *** CONTACT FORM ***

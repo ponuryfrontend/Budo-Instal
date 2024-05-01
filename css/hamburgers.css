@@ -13,16 +13,13 @@
   transition-duration: 0.15s;
   transition-timing-function: linear;
   font-size: inherit;
-
   text-transform: none;
   background-color: transparent;
   border: 0;
   margin: 0;
-  overflow: visible; }
-  /* .hamburger:hover {
-    opacity: 0.7; }
-  .hamburger.is-active:hover {
-    opacity: 0.7; } */
+  overflow: visible;
+  z-index: 10000;
+}
   .hamburger.is-active .hamburger-inner,
   .hamburger.is-active .hamburger-inner::before,
   .hamburger.is-active .hamburger-inner::after {
@@ -50,7 +47,9 @@
     position: absolute;
     transition-property: transform;
     transition-duration: 0.15s;
-    transition-timing-function: ease; }
+    transition-timing-function: ease; 
+    z-index: 10000;
+  }
   .hamburger-inner::before, .hamburger-inner::after {
     content: "";
     display: block; }
