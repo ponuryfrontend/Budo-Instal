@@ -14,18 +14,18 @@ html {
 body {
   font-family: "Crimson Text", sans-serif;
   font-size: 15px;
-  color: rgb(31, 45, 90);
+  color: #1f2d5a;
 }
 
 ::-moz-placeholder {
-  color: rgb(31, 45, 90);
+  color: #1f2d5a;
 }
 
 h1,
 h2,
 h3,
 ::placeholder {
-  color: rgb(31, 45, 90);
+  color: #1f2d5a;
 }
 
 ::-moz-placeholder {
@@ -62,13 +62,13 @@ textarea {
   margin: 0 15px;
   padding: 25px 15px;
   font-size: 22px;
-  color: rgb(31, 45, 90);
-  border-left: 3px solid rgb(31, 45, 90);
+  color: #1f2d5a;
+  border-left: 3px solid #1f2d5a;
 }
 
 .privacy-policy {
   margin: 0 15px;
-  color: rgb(31, 45, 90);
+  color: #1f2d5a;
 }
 
 .lock-scroll {
@@ -108,11 +108,12 @@ textarea {
   position: fixed;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  justify-content: flex-start;
+  align-items: flex-start;
   height: 100vh;
   width: 100%;
   top: 0;
+  padding-top: 8em;
   transform: translate(-110%);
   opacity: 0;
   background-color: rgb(239, 241, 250);
@@ -122,12 +123,25 @@ textarea {
   transform: translate(0);
   opacity: 1;
 }
-.nav-mobile__item {
-  padding: 0.5em;
-  margin: 0.5em 0;
-  font-size: 1.5rem;
-  font-weight: bold;
-  color: rgb(31, 45, 90);
+.nav-mobile__items {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 0 1em;
+  overflow: hidden;
+}
+.nav-mobile__icon {
+  width: 25%;
+  padding: 0.5em 1.25em;
+}
+.nav-mobile__text {
+  align-content: center;
+  padding: 0.5em 1em 0.5em 0;
+  height: 100%;
+  width: 100%;
+  font-size: 1.1em;
+  color: #1f2d5a;
   text-transform: capitalize;
 }
 
@@ -183,10 +197,10 @@ textarea {
 .contact-section .contact .contact-container .contact-wrapper .form-container .contact-form .contact-box .contact-textarea {
   padding: 5px;
   background: none;
-  border: 1px solid rgb(31, 45, 90);
+  border: 1px solid #1f2d5a;
   border-radius: 4px;
   outline: none;
-  color: rgb(31, 45, 90);
+  color: #1f2d5a;
   font-family: "Crimson Text", sans-serif;
   font-size: 16px;
 }
@@ -196,15 +210,15 @@ textarea {
   font-size: 16px;
   width: 100%;
   color: #fff;
-  background-color: rgb(31, 45, 90);
-  border: 1px solid rgb(31, 45, 90);
+  background-color: #1f2d5a;
+  border: 1px solid #1f2d5a;
   border-radius: 8px;
   transition: all 0.5s;
 }
 .contact-section .contact .contact-container .contact-wrapper .contact-btn:hover {
   background-color: rgb(147, 157, 187);
-  color: rgb(31, 45, 90);
-  border: 1px solid rgb(31, 45, 90);
+  color: #1f2d5a;
+  border: 1px solid #1f2d5a;
 }
 .contact-section .contact .contact-container .contact-wrapper .newsletter-container {
   display: flex;
@@ -228,7 +242,7 @@ textarea {
 }
 .contact-section .contact .contact-container .privacy-policy a {
   font-weight: 600;
-  color: rgb(31, 45, 90);
+  color: #1f2d5a;
 }
 
 .footer-container {
@@ -253,7 +267,7 @@ textarea {
   margin-left: 5px;
   padding: 10px;
   text-decoration: none;
-  color: rgb(31, 45, 90);
+  color: #1f2d5a;
   font-weight: 400;
   cursor: pointer;
 }

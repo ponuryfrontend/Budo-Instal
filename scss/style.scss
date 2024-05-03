@@ -89,7 +89,6 @@ textarea {
 		width: 100%;
 		max-width: 1400px;
 		background-color: colors.$main-background-color;
-		// z-index: 10;
 	}
 	
 	&__logo {
@@ -107,27 +106,42 @@ textarea {
 	position: fixed;
 	display: flex;
 	flex-direction: column;
-	justify-content: center;
-	align-items: center;
+	justify-content: flex-start;
+	align-items: flex-start;
 	height: 100vh;
 	width: 100%;
 	top: 0;
+	padding-top: 8em;
 	transform: translate(-110%);
 	opacity: 0;
 	background-color: colors.$main-background-color;
 	transition: opacity ease-in-out 1s;
-	// z-index: 11;
 
 	&--active {
 		transform: translate(0);
 		opacity: 1;
 	}
 
-	&__item {
-		padding: 0.5em;
-		margin: 0.5em 0;
-		font-size: 1.5rem;
-		font-weight: bold;
+	&__items {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: 100%;
+		padding: 0 1em;
+		overflow: hidden;
+	}
+	
+	&__icon {
+		width: 25%;
+		padding: 0.5em 1.25em;
+	}
+	
+	&__text {
+		align-content: center;
+		padding: 0.5em 1em 0.5em 0;
+		height: 100%;
+		width: 100%;
+		font-size: 1.1em;
 		color: colors.$main-font-color;
 		text-transform: capitalize;
 	}
