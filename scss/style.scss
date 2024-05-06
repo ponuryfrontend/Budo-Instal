@@ -90,13 +90,13 @@ textarea {
 		max-width: 1400px;
 		background-color: colors.$main-background-color;
 	}
-	
+
 	&__logo {
 		max-width: 150px;
 		margin: 10px 10px 10px 15px;
 		padding: 10px;
 	}
-	
+
 	&__nav-desktop {
 		display: none;
 	}
@@ -130,18 +130,18 @@ textarea {
 		padding: 0 1em;
 		overflow: hidden;
 	}
-	
+
 	&__icon {
 		width: 25%;
 		padding: 0.5em 1.25em;
 	}
-	
+
 	&__text {
 		align-content: center;
 		padding: 0.5em 1em 0.5em 0;
 		height: 100%;
 		width: 100%;
-		font-size: 1.1em;
+		font-size: 1.1rem;
 		color: colors.$main-font-color;
 		text-transform: capitalize;
 	}
