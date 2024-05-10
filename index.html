@@ -15,6 +15,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:wght@400;600;700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/6f551a8353.js" crossorigin="anonymous"></script>
     <link href="./css/hamburgers.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/gh/orestbida/cookieconsent@3.0.1/dist/cookieconsent.css" rel="stylesheet">
     <link rel="stylesheet" href="./css/style.css">
@@ -253,10 +254,10 @@
         <div class="header__box">
             <a class="header__logo-link" href="./index.html"><img src="./img/budo-instal-transparent-logo.png"
                     alt="Logo firmy Budo Instal" class="header__logo"></a>
-            <nav>
+            <nav class="header__nav-desktop-box">
                 <div class="header__nav-desktop">
-                    <a class="header__nav-item" href="#">oferta</a>
-                    <a class="header__nav-item" href="#">o nas</a>
+                    <a class="header__nav-item" href="#">Oferta</a>
+                    <a class="header__nav-item" href="#">O nas</a>
                     <a class="header__nav-item" href="#contact">kontakt</a>
                 </div>
             </nav>
@@ -267,9 +268,55 @@
             </button>
         </div>
     </header>
+    <div class="secondary-desktop-nav">
+        <a class="secondary-desktop-nav" href="#">System rur</a>
+        <a class="secondary-desktop-nav" href="#">Armatura wodociągowa</a>
+        <a class="secondary-desktop-nav" href="#">Kształtki kanalizacyjne</a>
+        <a class="secondary-desktop-nav" href="#">Żeliwo drogowe</a>
+        <a class="secondary-desktop-nav" href="#">Studnie</a>
+    </div>
     <main>
-        <section>
-
+        <section class="container">
+            <div class="slider">
+                <div class="slider__slide-box slider__slide-box--active" id="slide1">
+                    <div class="slider__text-box slider__text-box--slide1">
+                        <h1>Specjalistyczna sprzedaż hurtowa</h1>
+                        <p class="slider__description">text1</p>
+                        <a href="#" class="slider__btn">O nas</a>
+                    </div>
+                    <img class="slider__img" src="https://static8.depositphotos.com/1006045/828/i/600/depositphotos_8283178-stock-photo-pvc-pipes.jpg"
+                        alt="Slide 1">
+                </div>
+                <div class="slider__slide-box" id="slide2">
+                    <div class="slider__text-box slider__text-box--slide2">
+                        <h2>Systemy rur</h2>
+                        <p class="slider__description">text1</p>
+                        <a href="#" class="slider__btn">Dowiedz się więcej</a>
+                    </div>
+                    <img class="slider__img" src="https://static8.depositphotos.com/1006045/828/i/600/depositphotos_8283178-stock-photo-pvc-pipes.jpg"
+                        alt="Slide 2">
+                </div>
+                <div class="slider__slide-box" id="slide3">
+                    <div class="slider__text-box slider__text-box--slide3">
+                        <h2>System rur</h2>
+                        <p class="slider__description">text1</p>
+                        <a href="#" class="slider__btn">Dowiedz się więcej</a>
+                    </div>
+                    <img class="slider__img" src="https://static8.depositphotos.com/1006045/828/i/600/depositphotos_8283178-stock-photo-pvc-pipes.jpg"
+                        alt="Slide 3">
+                </div>
+                <div class="slider__slide-box" id="slide4">
+                    <div class="slider__text-box slider__text-box--slide3">
+                        <h2>Studie</h2>
+                        <p class="slider__description">text1</p>
+                        <a href="#" class="slider__btn">Dowiedz się więcej</a>
+                    </div>
+                    <img class="slider__img" src="https://static8.depositphotos.com/1006045/828/i/600/depositphotos_8283178-stock-photo-pvc-pipes.jpg"
+                        alt="Slide 4">
+                </div>
+                <i class="arrow arrow--prevBtn fa-solid fa-arrow-left" id="prevBtn"></i>
+                <i class="arrow arrow--nextBtn fa-solid fa-arrow-right" id="nextBtn"></i>
+            </div>
         </section>
         <section class="contact-section" id="contact">
             <div class="contact">
@@ -340,7 +387,8 @@
                     <a class="legal-link" href="#">Informacje o plikach</a>
                 </div>
                 <div class="copyright">
-                    <p class="legal-link">Copyright © <span class="footer_year"></span> Budo-Instal 2 Sławomir Czyżewski</p>
+                    <p class="legal-link">Copyright © <span class="footer_year"></span> Budo-Instal 2 Sławomir Czyżewski
+                    </p>
                 </div>
             </div>
         </div>

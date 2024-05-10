@@ -17,6 +17,7 @@ body {
 	font-family: 'Crimson Text', sans-serif;
 	font-size: 15px;
 	color: colors.$main-font-color;
+	background-color: colors.$main-background-color;
 	// overflow-x: hidden;
 }
 
@@ -78,7 +79,6 @@ textarea {
 
 .header {
 	position: relative;
-	background-color: colors.$main-background-color;
 
 	&__box {
 		position: fixed;
@@ -88,7 +88,9 @@ textarea {
 		margin: 0 auto;
 		width: 100%;
 		max-width: 1400px;
+		top: 0;
 		background-color: colors.$main-background-color;
+		z-index: 10;
 	}
 
 	&__logo {
@@ -112,10 +114,11 @@ textarea {
 	width: 100%;
 	top: 0;
 	padding-top: 8em;
+	background-color: colors.$main-background-color;
 	transform: translate(-110%);
 	opacity: 0;
-	background-color: colors.$main-background-color;
 	transition: opacity ease-in-out 1s;
+	z-index: 10;
 
 	&--active {
 		transform: translate(0);
@@ -147,12 +150,118 @@ textarea {
 	}
 }
 
+.secondary-desktop-nav {
+	display: none;
+}
+
+.slider {
+	position: relative;
+	width: 100%;
+	max-width: 100vw;
+	height: 80vh;
+	overflow: hidden;
+
+	&__slide-box {
+		position: absolute;
+		display: flex;
+		flex-direction: column;
+		flex: 0 0 100%;
+		height: 100%;
+		width: 100%;
+		padding-top: 4em;
+		top: 0;
+		left: 0;
+		transition: transform 1s ease-in-out;
+		transform: translateX(100%);
+
+		&--active {
+			transform: translateX(0);
+		}
+	}
+
+	&__text-box {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: flex-start;
+		flex: 3;
+		box-sizing: border-box;
+		width: 100%;
+		padding: 2em;
+		order: 2;
+		color: colors.$h1-color;
+
+		&--slide1 {
+			background-color: #ba93be;
+		}
+
+		&--slide2 {
+			background-color: #0767b2;
+		}
+
+		&--slide3 {
+			background-color: #d89069;
+		}
+	}
+
+	&__description {
+		padding: 0.5em 0;
+		font-size: 1.1rem;
+	}
+
+	&__btn {
+		display: inline-block;
+		margin: 20px 0;
+		padding: 10px 20px;
+		text-align: center;
+		background-color: transparent;
+		border: 2px solid colors.$h1-color;
+		border-radius: 4px;
+		text-decoration: none;
+		font-size: 1.1rem;
+		font-weight: 600;
+		color: colors.$h1-color;
+
+		&:hoover {
+			background-color: colors.$h1-color;
+			color: black;
+			transition: 0.5s;
+		}
+	}
+
+	&__img {
+		object-fit: cover;
+		flex: 7;
+		width: 100%;
+		height: auto;
+		box-sizing: border-box;
+	}
+}
+
+.arrow {
+	position: absolute;
+	top: 60%;
+	font-size: 24px;
+	color: #fff;
+	background: none;
+	border: none;
+	cursor: pointer;
+	outline: none;
+
+	&--prevBtn {
+		left: 10px;
+	}
+
+	&--nextBtn {
+		right: 10px;
+	}
+}
+
 // *** CONTACT FORM ***
 
 .contact-section {
 	display: block;
 	padding: 35px 0;
-	background-color: colors.$main-background-color;
 
 	.contact {
 		.contact-container {
@@ -276,7 +385,6 @@ textarea {
 .footer-container {
 	width: 100%;
 	height: 100%;
-	background-color: colors.$main-background-color;
 
 	.legal-rules {
 		padding: 20px 30px;
@@ -316,20 +424,34 @@ textarea {
 			display: none;
 		}
 
-		&__info-box {
-			display: none;
+		&__nav-desktop-box {
+			margin-right: 8em;
 		}
 
 		&__nav-desktop {
 			display: flex;
+			justify-content: end;
+			align-items: start;
+		}
+
+		&__nav-item {
+			padding: 1em 2em;
+			font-size: 1.25rem;
+			font-weight: 600;
+			color: colors.$main-font-color;
+			text-transform: capitalize;
+		}
+	}
+
+	.secondary-desktop-nav {
+		&:hover {
+			display: flex;
+			height: 75vh;
+			width: 100%;
 		}
 	}
 
 	.hamburger {
-		display: none;
-	}
-
-	.contact-info {
 		display: none;
 	}
 
