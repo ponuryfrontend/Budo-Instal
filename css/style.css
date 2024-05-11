@@ -409,6 +409,20 @@ textarea {
   .hamburger {
     display: none;
   }
+  .slider {
+    height: 700px;
+  }
+  .slider__slide-box {
+    flex-direction: row;
+    padding-top: 4.5em;
+  }
+  .slider__text-box {
+    width: 30%;
+    padding: 4em;
+  }
+  .slider__img {
+    width: 70px;
+  }
   .contact-wrapper {
     display: flex;
   }

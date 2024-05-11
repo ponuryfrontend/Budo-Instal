@@ -202,9 +202,11 @@ textarea {
 		&--slide3 {
 			background-color: #ffffff;
 		}
+
 		&--slide4 {
 			background-color: #ffffff;
 		}
+
 		&--slide5 {
 			background-color: #ffffff;
 		}
@@ -220,7 +222,6 @@ textarea {
 	}
 
 	&__btn {
-		// display: inline-block;
 		margin: 0.5em 0;
 		padding: 0.5em 1.2em;
 		text-align: center;
@@ -463,6 +464,21 @@ textarea {
 
 	.hamburger {
 		display: none;
+	}
+
+	.slider {
+		height: 700px;
+		&__slide-box {
+			flex-direction: row;
+			padding-top: 4.5em;
+		}
+		&__text-box {
+			width: 30%;
+			padding: 4em;
+		}
+		&__img {
+			width: 70px;
+		}
 	}
 
 	// *** CONTACT FORM ***
