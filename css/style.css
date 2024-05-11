@@ -231,7 +231,7 @@ textarea {
      object-fit: cover;
   flex: 7;
   width: 100%;
-  height: auto;
+  height: 30%;
   box-sizing: border-box;
 }
 
