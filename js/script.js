@@ -19,7 +19,7 @@ const showSlide = (n) => {
 
 const nextSlide = () => showSlide(currentSlide + 1);
 const prevSlide = () => showSlide(currentSlide - 1);
-const startSlideShow = () => slideInterval = setInterval(nextSlide, 3750); // Change slide every 3.75 seconds
+const startSlideShow = () => slideInterval = setInterval(nextSlide, 4000); // Change slide every 4 seconds
 const stopSlideShow = () => clearInterval(slideInterval);
 
 document.getElementById('prevBtn').addEventListener('click', prevSlide);
