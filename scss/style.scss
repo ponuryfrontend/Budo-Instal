@@ -17,8 +17,6 @@ body {
 	font-family: 'Crimson Text', sans-serif;
 	font-size: 15px;
 	color: colors.$main-font-color;
-	background-color: colors.$main-background-color;
-	// overflow-x: hidden;
 }
 
 h1,
@@ -79,6 +77,9 @@ textarea {
 
 .header {
 	position: relative;
+	margin: 0 auto;
+	width: 100%;
+	max-width: 1400px;
 
 	&__box {
 		position: fixed;
@@ -511,7 +512,6 @@ textarea {
 		height: 700px;
 		&__slide-box {
 			flex-direction: row;
-			padding: 5em 2em 0 2em;
 		}
 		&__text-box {
 			width: 30%;
