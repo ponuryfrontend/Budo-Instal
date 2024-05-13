@@ -157,7 +157,7 @@ textarea {
   width: 100%;
   max-width: 100vw;
   height: 85vh;
-  margin-bottom: 3em;
+  padding-bottom: 3em;
   overflow: hidden;
 }
 .slider__slide-box {
@@ -252,7 +252,8 @@ textarea {
 }
 
 .benefits {
-  padding: 0 1em 2em;
+  padding: 3em 1em 2em;
+  background-color: white;
 }
 .benefits__box {
   display: flex;
