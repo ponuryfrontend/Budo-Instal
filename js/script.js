@@ -1,16 +1,17 @@
 const menuButton = document.querySelector('.hamburger')
 const navMobile = document.querySelector('.nav-mobile')
 const footerYear = document.querySelector('.footer_year')
+// Main slider 
 let currentSlide = 0;
 const slides = document.querySelectorAll('.slider__slide-box');
 const totalSlides = slides.length;
 let slideInterval;
-const brandSlider = document.querySelector('.brand-slider__box');
-const brandLogos = document.querySelectorAll('.brand-slider__brand');
-const sliderSpeed = 3000; // Czas w milisekundach pomiędzy przesunięciami
-
+// Brand Slider 
 let currentIndex = 0;
 let animationId;
+let sliderSpeed = 3500;
+const brandSlider = document.querySelector('.brand-slider__box');
+const brandLogos = document.querySelectorAll('.brand-slider__brand');
 
 const showMobileMenu = () => {
 	navMobile.classList.toggle('nav-mobile--active')
@@ -47,7 +48,16 @@ function slideToNext() {
 
 function updateSliderPosition() {
     const newPosition = -currentIndex * (brandLogos[0].offsetWidth + 105); // Przesunięcie o szerokość logotypu + odstęp
-    brandSlider.style.transition = 'transform 3s linear';
+    const screenWidth = window.innerWidth; // Pobierz szerokość ekranu
+
+    // Ustaw czas trwania animacji w zależności od szerokości ekranu
+    let transitionDuration = '3.5s'; // Domyślny czas trwania animacji
+    if (screenWidth > 810) {
+        transitionDuration = '6s'; // Czas trwania animacji na większych ekranach
+        sliderSpeed = '6000';
+    }
+
+    brandSlider.style.transition = `transform ${transitionDuration} linear`;
     brandSlider.style.transform = `translateX(${newPosition}px)`;
 }
 
@@ -69,7 +79,6 @@ const handleCurrentYear = () => {
 
 // Brand Slider - rozpoczęcie automatycznego przesuwania
 startAutoSlide();
-
 // Przesunięcie po wyświetleniu ostatniego logotypu
 brandSlider.addEventListener('transitionend', () => {
     if (currentIndex === brandLogos.length) {
