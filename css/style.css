@@ -264,6 +264,15 @@ textarea {
   right: 0.8em;
 }
 
+.about {
+  width: 100%;
+  padding: 0 1em 2em;
+}
+.about__description {
+  padding: 2em 2em 0;
+  text-align: left;
+}
+
 .brand-slider {
   position: relative;
   width: 100%;
