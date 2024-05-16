@@ -307,7 +307,7 @@ textarea {
 	&__box {
 		display: flex;
 		margin: 2em 0;
-		transition: transform 3.5s linear;
+		animation: slideAnimation 15s linear infinite;
 	}
 
 	&__brand {
@@ -347,6 +347,15 @@ textarea {
 		}
 	}
 }
+
+@keyframes slideAnimation {
+    0% {
+      transform: translateX(0%);
+    }
+    100% {
+      transform: translateX(-310%);
+    }
+  }
 
 // *** BENEFITS SECTION ***
 
@@ -607,6 +616,10 @@ textarea {
 	.brand-slider {
 		&__brand {
 			margin: 0 0;
+		}
+
+		&__box {
+			animation: slideAnimation 50s linear infinite;
 		}
 	}
 

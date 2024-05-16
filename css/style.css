@@ -286,7 +286,7 @@ textarea {
 .brand-slider__box {
   display: flex;
   margin: 2em 0;
-  transition: transform 3.5s linear;
+  animation: slideAnimation 15s linear infinite;
 }
 .brand-slider__brand {
   display: flex;
@@ -321,6 +321,14 @@ textarea {
   transition: 0.5s;
 }
 
+@keyframes slideAnimation {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-310%);
+  }
+}
 .benefits {
   padding: 3em 1em 2em;
   background-color: white;
@@ -419,7 +427,7 @@ textarea {
   transition: all 0.5s;
 }
 .contact-section .contact .contact-container .contact-wrapper .contact-btn:hover {
-  background-color: rgb(147, 157, 187);
+  background-color: #939dbb;
   color: #1f2d5a;
   border: 1px solid #1f2d5a;
 }
@@ -530,6 +538,9 @@ textarea {
   }
   .brand-slider__brand {
     margin: 0 0;
+  }
+  .brand-slider__box {
+    animation: slideAnimation 50s linear infinite;
   }
   .benefits__icons-box {
     grid-template-columns: repeat(4, 1fr);
