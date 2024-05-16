@@ -286,7 +286,7 @@ textarea {
 .brand-slider__box {
   display: flex;
   margin: 2em 0;
-  animation: slideAnimation 15s linear infinite;
+  animation: slideAnimation 30s linear infinite;
 }
 .brand-slider__brand {
   display: flex;
@@ -326,7 +326,7 @@ textarea {
     transform: translateX(0%);
   }
   100% {
-    transform: translateX(-310%);
+    transform: translateX(-960%);
   }
 }
 .benefits {
@@ -487,6 +487,32 @@ textarea {
   font-weight: 400;
 }
 
+@media (min-width: 350px) {
+  .brand-slider__box {
+    animation: slideAnimation 30s linear infinite;
+  }
+  @keyframes slideAnimation {
+    0% {
+      transform: translateX(0%);
+    }
+    100% {
+      transform: translateX(-780%);
+    }
+  }
+}
+@media (min-width: 475px) {
+  .brand-slider__box {
+    animation: slideAnimation 30s linear infinite;
+  }
+  @keyframes slideAnimation {
+    0% {
+      transform: translateX(0%);
+    }
+    100% {
+      transform: translateX(-720%);
+    }
+  }
+}
 @media (min-width: 810px) {
   .header__nav-mobile {
     display: none;
@@ -541,6 +567,14 @@ textarea {
   }
   .brand-slider__box {
     animation: slideAnimation 50s linear infinite;
+  }
+  @keyframes slideAnimation {
+    0% {
+      transform: translateX(0%);
+    }
+    100% {
+      transform: translateX(-310%);
+    }
   }
   .benefits__icons-box {
     grid-template-columns: repeat(4, 1fr);

@@ -307,7 +307,7 @@ textarea {
 	&__box {
 		display: flex;
 		margin: 2em 0;
-		animation: slideAnimation 15s linear infinite;
+		animation: slideAnimation 30s linear infinite;
 	}
 
 	&__brand {
@@ -349,13 +349,13 @@ textarea {
 }
 
 @keyframes slideAnimation {
-    0% {
-      transform: translateX(0%);
-    }
-    100% {
-      transform: translateX(-310%);
-    }
-  }
+	0% {
+		transform: translateX(0%);
+	}
+	100% {
+		transform: translateX(-960%);
+	}
+}
 
 // *** BENEFITS SECTION ***
 
@@ -552,6 +552,44 @@ textarea {
 	}
 }
 
+@media (min-width: 350px) {
+
+	.brand-slider {
+		&__box {
+			animation: slideAnimation 30s linear infinite;
+		}
+	}
+
+	@keyframes slideAnimation {
+		0% {
+			transform: translateX(0%);
+		}
+		100% {
+			transform: translateX(-780%);
+		}
+	}
+	
+}
+
+@media (min-width: 475px) {
+
+	.brand-slider {
+		&__box {
+			animation: slideAnimation 30s linear infinite;
+		}
+	}
+
+	@keyframes slideAnimation {
+		0% {
+			transform: translateX(0%);
+		}
+		100% {
+			transform: translateX(-720%);
+		}
+	}
+	
+}
+
 @media (min-width: 810px) {
 	.header {
 		&__nav-mobile {
@@ -620,6 +658,15 @@ textarea {
 
 		&__box {
 			animation: slideAnimation 50s linear infinite;
+		}
+	}
+
+	@keyframes slideAnimation {
+		0% {
+			transform: translateX(0%);
+		}
+		100% {
+			transform: translateX(-310%);
 		}
 	}
 
