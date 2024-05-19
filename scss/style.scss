@@ -72,6 +72,10 @@ textarea {
 	max-width: 1400px;
 }
 
+.second-nav {
+	cursor: pointer;
+}
+
 .section-title {
 	margin: 0 15px;
 	padding: 25px 15px;
@@ -263,10 +267,6 @@ textarea {
 	cursor: pointer;
 	outline: none;
 	transition: background-color 0.5s linear;
-
-	&:hover {
-		background-color: colors.$main-background-color;
-	}
 
 	&--prevBtn {
 		left: 0.8em;
@@ -621,8 +621,72 @@ textarea {
 			}
 		}
 
+		&__second-nav-box {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			cursor: pointer;
+		}
+
+		&__drop-down-close-btn {
+			background: none;
+			outline: none;
+			font-family: none;
+			transition: transform 0.65s ease-in-out;
+
+			&--rotate {
+				transform: rotate(495deg);
+				transform-origin: center;
+			}
+		}
+
 		&__drop-down-nav-box {
-			display: none;
+			position: absolute;
+			display: flex;
+			top: 4.2em;
+			left: -160%;
+			width: 150vw;
+			height: 150%;
+			padding: 1em 0;
+			margin-left: 12em;
+			background-color: colors.$main-background-color;
+			border-radius: 0 15px 0;
+			transform: translateX(150%);
+			z-index: -10;
+			overflow: hidden;
+			transition: transform 1s cubic-bezier(0.14, 0.25, 0.29, 1.35);
+
+			&--active {
+				transform: translateX(0%);
+			}
+
+			&--hidden {
+				transform: translateX(150%);
+			}
+		}
+
+		&__drop-down-nav-link {
+			align-self: center;
+			justify-self: center;
+			padding: 1em 3em;
+			font-size: 1rem;
+			font-weight: 600;
+			color: colors.$main-font-color;
+			text-transform: capitalize;
+			transition: color 0.5s linear;
+
+			&:hover {
+				color: colors.$secondary-background-color;
+			}
+		}
+
+		&__drop-down-close_arrow {
+			width: 0.5em;
+			justify-self: center;
+			margin: 0 1rem;
+			font-size: 6rem;
+			background: none;
+			outline: none;
 		}
 	}
 
@@ -661,6 +725,10 @@ textarea {
 		font-size: 1rem;
 		border: 2px solid;
 		border-radius: 50px;
+
+		&:hover {
+			background-color: colors.$main-background-color;
+		}
 	}
 
 	.brand-slider {

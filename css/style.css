@@ -78,6 +78,10 @@ textarea {
   max-width: 1400px;
 }
 
+.second-nav {
+  cursor: pointer;
+}
+
 .section-title {
   margin: 0 15px;
   padding: 25px 15px;
@@ -250,9 +254,6 @@ textarea {
   cursor: pointer;
   outline: none;
   transition: background-color 0.5s linear;
-}
-.arrow:hover {
-  background-color: rgb(239, 241, 250);
 }
 .arrow--prevBtn {
   left: 0.8em;
@@ -540,8 +541,64 @@ textarea {
   .header__nav-item:hover {
     color: #939dbb;
   }
+  .header__second-nav-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+  }
+  .header__drop-down-close-btn {
+    background: none;
+    outline: none;
+    font-family: none;
+    transition: transform 0.65s ease-in-out;
+  }
+  .header__drop-down-close-btn--rotate {
+    transform: rotate(495deg);
+    transform-origin: center;
+  }
   .header__drop-down-nav-box {
-    display: none;
+    position: absolute;
+    display: flex;
+    top: 4.2em;
+    left: -160%;
+    width: 150vw;
+    height: 150%;
+    padding: 1em 0;
+    margin-left: 12em;
+    background-color: rgb(239, 241, 250);
+    border-radius: 0 15px 0;
+    transform: translateX(150%);
+    z-index: -10;
+    overflow: hidden;
+    transition: transform 1s cubic-bezier(0.14, 0.25, 0.29, 1.35);
+  }
+  .header__drop-down-nav-box--active {
+    transform: translateX(0%);
+  }
+  .header__drop-down-nav-box--hidden {
+    transform: translateX(150%);
+  }
+  .header__drop-down-nav-link {
+    align-self: center;
+    justify-self: center;
+    padding: 1em 3em;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #1f2d5a;
+    text-transform: capitalize;
+    transition: color 0.5s linear;
+  }
+  .header__drop-down-nav-link:hover {
+    color: #939dbb;
+  }
+  .header__drop-down-close_arrow {
+    width: 0.5em;
+    justify-self: center;
+    margin: 0 1rem;
+    font-size: 6rem;
+    background: none;
+    outline: none;
   }
   .secondary-desktop-nav:hover {
     display: flex;
@@ -573,6 +630,9 @@ textarea {
     font-size: 1rem;
     border: 2px solid;
     border-radius: 50px;
+  }
+  .arrow:hover {
+    background-color: rgb(239, 241, 250);
   }
   .brand-slider__brand {
     margin: 0 0;
