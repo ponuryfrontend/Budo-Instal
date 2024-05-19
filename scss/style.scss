@@ -180,11 +180,11 @@ textarea {
 		width: 100%;
 		top: 0;
 		left: 0;
-		transform: translateX(100%);
-		transition: transform 1s ease-in-out;
+		opacity: 0;
+		transition: opacity 1.2s linear, transform 1s ease-in-out;
 
 		&--active {
-			transform: translateX(0);
+			opacity: 1;
 		}
 	}
 
@@ -619,6 +619,10 @@ textarea {
 			&:hover {
 				color: colors.$secondary-background-color;
 			}
+
+			&--p {
+				padding: 1em 0.2em 1em 2em;
+			}
 		}
 
 		&__second-nav-box {
@@ -678,15 +682,6 @@ textarea {
 			&:hover {
 				color: colors.$secondary-background-color;
 			}
-		}
-
-		&__drop-down-close_arrow {
-			width: 0.5em;
-			justify-self: center;
-			margin: 0 1rem;
-			font-size: 6rem;
-			background: none;
-			outline: none;
 		}
 	}
 

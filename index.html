@@ -276,9 +276,8 @@
                         alt="Logo firmy Budo Instal" class="header__logo"></a>
                 <nav class="header__nav-desktop-box">
                     <div class="header__nav-desktop">
-
                         <a class="header__second-nav-box">
-                            <p class="header__nav-item second-nav">Oferta</p>
+                            <p class="header__nav-item header__nav-item--p">Oferta</p>
                             <button class="header__drop-down-close-btn"><svg fill="#1f2d5a" width="2.2em" height="2.2em" viewBox="0 0 32.00 32.00" xmlns="http://www.w3.org/2000/svg" stroke="#1f2d5a" stroke-width="0.00032">
                                 <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
                                 <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
@@ -286,32 +285,13 @@
                                   <path d="M9,17h6v6a1,1,0,0,0,2,0V17h6a1,1,0,0,0,0-2H17V9a1,1,0,0,0-2,0v6H9a1,1,0,0,0,0,2Z"></path>
                                 </g>
                               </svg></button>
-
                         </a>
-
-
-
                         <div class="header__drop-down-nav-box">
                             <a class="header__drop-down-nav-link" href="#">System rur</a>
                             <a class="header__drop-down-nav-link" href="#">Armatura wodociągowa</a>
                             <a class="header__drop-down-nav-link" href="#">Kształtki kanalizacyjne</a>
                             <a class="header__drop-down-nav-link" href="#">Żeliwo drogowe</a>
                             <a class="header__drop-down-nav-link" href="#">Studnie</a>
-                            <button class="header__drop-down-close_arrow">
-                                <svg fill="#1f2d5a" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
-                                    xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="-66 -66 462.00 462.00"
-                                    xml:space="preserve" stroke="#1f2d5a" stroke-width="0.0033"
-                                    transform="rotate(0)matrix(1, 0, 0, 1, 0, 0)">
-                                    <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-                                    <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"
-                                        stroke="#CCCCCC" stroke-width="0.66"></g>
-                                    <g id="SVGRepo_iconCarrier">
-                                        <path id="XMLID_7_"
-                                            d="M288.107,116.894c-5.858-5.858-15.355-5.858-21.213,0c-5.858,5.858-5.858,15.355,0,21.213L278.787,150H15 c-8.284,0-15,6.716-15,15c0,8.284,6.716,15,15,15h263.787l-11.894,11.893c-5.858,5.858-5.858,15.355,0,21.213 c2.929,2.929,6.768,4.394,10.606,4.394c3.839,0,7.678-1.464,10.607-4.394l37.5-37.5c5.858-5.858,5.858-15.355,0-21.213 L288.107,116.894z">
-                                        </path>
-                                    </g>
-                                </svg>
-                            </button>
                         </div>
                         <a class="header__nav-item" href="#">O nas</a>
                         <a class="header__nav-item" href="#contact">kontakt</a>
@@ -409,14 +389,14 @@
                                 alt="Logo producenta Domex"></div>
                         <div class="brand-slider__brand"><img class="brand-slider__logo" src="./img/norson-logo.png"
                                 alt="Logo producenta Norson"></div>
-                        <div class="brand-slider__brand"><img class="brand-slider__logo" src="./img/lmb-logo.png"
+                        <div class="brand-slider__brand"><img class="brand-slider__logo" src="./icons/lmb-logo.svg"
                                 alt="Logo producenta Lefek Miler Banasik"></div>
                         <div class="brand-slider__brand"><img class="brand-slider__logo" src="./img/meier-logo.png"
                                 alt="Logo producenta Meier Stąporków"></div>
                         <div class="brand-slider__brand"><img class="brand-slider__logo" src="./img/fansuld-logo.png"
                                 alt="Logo producenta Fansuld Końskie"></div>
                         <div class="brand-slider__brand"><img class="brand-slider__logo"
-                                src="./img/profil-pila-logo.png" alt="Logo producenta Profil Piła"></div>
+                                src="./icons/profil-pila-logo.svg" alt="Logo producenta Profil Piła"></div>
                         <div class="brand-slider__brand"><img class="brand-slider__logo" src="./img/Aeon-logo.jpeg"
                                 alt="Logo producenta Aeon Szamotuły"></div>
                         <div class="brand-slider__brand"><img class="brand-slider__logo" src="./img/bohamet-logo.png"
@@ -773,29 +753,6 @@
         </div>
     </footer>
     <script src="https://www.google.com/recaptcha/api.js"></script>
-    <script>
-        /**
-         * forEach implementation for Objects/NodeLists/Arrays, automatic type loops and context options
-         *
-         * @private
-         * @author Todd Motto
-         * @link https://github.com/toddmotto/foreach
-         * @param {Array|Object|NodeList} collection - Collection of items to iterate, could be an Array, Object or NodeList
-         * @callback requestCallback      callback   - Callback function for each iteration.
-         * @param {Array|Object|NodeList} scope=null - Object/NodeList/Array that forEach is iterating over, to use as the this value when executing callback.
-         * @returns {}
-         */
-        var forEach = function (t, o, r) { if ("[object Object]" === Object.prototype.toString.call(t)) for (var c in t) Object.prototype.hasOwnProperty.call(t, c) && o.call(r, t[c], c, t); else for (var e = 0, l = t.length; l > e; e++)o.call(r, t[e], e, t) };
-
-        var hamburgers = document.querySelectorAll(".hamburger");
-        if (hamburgers.length > 0) {
-            forEach(hamburgers, function (hamburger) {
-                hamburger.addEventListener("click", function () {
-                    this.classList.toggle("is-active");
-                }, false);
-            });
-        }
-    </script>
     <script src="https://cdn.jsdelivr.net/gh/orestbida/cookieconsent@3.0.1/dist/cookieconsent.umd.js"></script>
     <script src="./js/script.js"></script>
 </body>

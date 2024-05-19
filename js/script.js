@@ -4,13 +4,36 @@ const navBox = document.querySelector('.header__nav-desktop-box')
 const headerDropDownBox = document.querySelector('.header__drop-down-nav-box')
 const secondNav = document.querySelector('.header__second-nav-box')
 const plusIcon = document.querySelector('.header__drop-down-close-btn')
-const closeArrow = document.querySelector('.header__drop-down-close_arrow')
 // Main slider
 let currentSlide = 0
 const slides = document.querySelectorAll('.slider__slide-box')
 const totalSlides = slides.length
 let slideInterval
 const footerYear = document.querySelector('.footer_year')
+
+/**
+         * forEach implementation for Objects/NodeLists/Arrays, automatic type loops and context options
+         *
+         * @private
+         * @author Todd Motto
+         * @link https://github.com/toddmotto/foreach
+         * @param Array|Object|NodeList collection - Collection of items to iterate, could be an Array, Object or NodeList
+         * @callback requestCallback      callback   - Callback function for each iteration.
+         * @param Array|Object|NodeList scope=null - Object/NodeList/Array that forEach is iterating over, to use as the this value when executing callback.
+         * @returns 
+         */
+var forEach = function (t, o, r) { if ("[object Object]" === Object.prototype.toString.call(t)) for (var c in t) Object.prototype.hasOwnProperty.call(t, c) && o.call(r, t[c], c, t); else for (var e = 0, l = t.length; l > e; e++)o.call(r, t[e], e, t) };
+
+var hamburgers = document.querySelectorAll(".hamburger");
+if (hamburgers.length > 0) {
+	forEach(hamburgers, function (hamburger) {
+		hamburger.addEventListener("click", function () {
+			this.classList.toggle("is-active");
+		}, false);
+	});
+}
+
+// Mobile navigation
 
 const showMobileMenu = () => {
 	navMobile.classList.toggle('nav-mobile--active')
@@ -54,15 +77,12 @@ const handleCurrentYear = () => {
 
 menuButton.addEventListener('click', showMobileMenu)
 secondNav.addEventListener('click', dropDownMenu)
-closeArrow.addEventListener('click', closeDropDownMenu)
 showSlide(currentSlide)
 startSlideShow()
 handleCurrentYear()
 
 document.addEventListener('DOMContentLoaded', () => {
-	// Add click event listener to the document
 	document.addEventListener('click', e => {
-		// Check if the click was outside the nav box
 		if (!navBox.contains(e.target)) {
 			closeDropDownMenu()
 		}
