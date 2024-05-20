@@ -38,6 +38,7 @@ h3,
 
 a {
   text-decoration: none;
+  cursor: pointer;
 }
 
 img {
@@ -179,11 +180,13 @@ textarea {
   width: 100%;
   top: 0;
   left: 0;
+  transform: translateX(-150%);
   opacity: 0;
-  transition: opacity 1.2s linear, transform 1s ease-in-out;
+  transition: opacity 1.5s linear;
 }
 .slider__slide-box--active {
   opacity: 1;
+  transform: translateX(0%);
 }
 .slider__text-box {
   display: flex;
@@ -222,18 +225,17 @@ textarea {
 .slider__btn {
   margin: 0.5em 0;
   padding: 0.5em 1.2em;
-  background-color: transparent;
+  background-color: #1f2d5a;
   border: 2px solid #1f2d5a;
   border-radius: 4px;
-  text-decoration: none;
-  font-size: 1.1rem;
+  font-size: 1.3rem;
+  color: rgb(255, 255, 255);
   font-weight: 600;
-  color: #1f2d5a;
   transition: color 0.5s linear, background-color 0.5s linear;
 }
 .slider__btn:hover {
-  background-color: #1f2d5a;
-  color: rgb(255, 255, 255);
+  background-color: transparent;
+  color: #1f2d5a;
 }
 .slider__img {
   -o-object-fit: cover;
@@ -305,18 +307,14 @@ textarea {
   margin: 0.5em 0;
   padding: 0.5em 1.2em;
   text-align: center;
-  background-color: transparent;
+  background-color: #1f2d5a;
   border: 2px solid #1f2d5a;
   border-radius: 4px;
   text-decoration: none;
+  color: rgb(255, 255, 255);
   font-size: 1.1rem;
   font-weight: 600;
-  color: #1f2d5a;
   transition: color 0.5s linear, background-color 0.5s linear;
-}
-.brand-slider__btn:hover {
-  background-color: #1f2d5a;
-  color: rgb(255, 255, 255);
 }
 
 @keyframes slideAnimation {
@@ -514,6 +512,9 @@ textarea {
   }
 }
 @media (min-width: 810px) {
+  .headers-titles {
+    font-size: 1.6rem;
+  }
   .header__box {
     justify-content: space-evenly;
   }
@@ -542,12 +543,13 @@ textarea {
     color: #939dbb;
   }
   .header__nav-item--p {
-    padding: 1em 0.2em 1em 2em;
+    padding: 1em 0.4em 1em 2em;
   }
   .header__second-nav-box {
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-right: 2em;
     cursor: pointer;
   }
   .header__drop-down-close-btn {
@@ -613,6 +615,16 @@ textarea {
     width: 30%;
     padding: 4em;
   }
+  .slider__headers {
+    font-size: 1.8rem;
+  }
+  .slider__description {
+    padding: 1em 0;
+    font-size: 1.1rem;
+  }
+  .slider__btn {
+    font-size: 1.3rem;
+  }
   .slider__img {
     height: 100%;
     width: 70px;
@@ -629,11 +641,32 @@ textarea {
   .arrow:hover {
     background-color: rgb(239, 241, 250);
   }
+  .about {
+    padding: 4em 1em;
+  }
+  .about__description {
+    padding: 2em;
+    font-size: 1.1rem;
+  }
+  .brand-slider {
+    padding: 4em 1em;
+  }
   .brand-slider__brand {
     margin: 0 0;
   }
+  .brand-slider__description {
+    padding: 2em;
+    font-size: 1.1rem;
+  }
   .brand-slider__box {
     animation: slideAnimation 50s linear infinite;
+  }
+  .brand-slider__btn {
+    font-size: 1.3rem;
+  }
+  .brand-slider__btn:hover {
+    background-color: transparent;
+    color: #1f2d5a;
   }
   @keyframes slideAnimation {
     0% {
@@ -643,14 +676,23 @@ textarea {
       transform: translateX(-310%);
     }
   }
+  .benefits {
+    padding: 4em 1em;
+  }
   .benefits__icons-box {
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(1, 1fr);
   }
-  .contact-wrapper {
+  .benefits__text {
+    font-size: 1.1rem;
+  }
+  .contact-section {
+    padding: 4em 0;
+  }
+  .contact-section .contact-wrapper {
     display: flex;
   }
-  .contact-wrapper .form-container {
+  .contact-section .contact-wrapper .form-container {
     display: flex;
     width: 70%;
   }

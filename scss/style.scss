@@ -32,6 +32,7 @@ h3,
 
 a {
 	text-decoration: none;
+	cursor: pointer;
 }
 
 img {
@@ -180,11 +181,13 @@ textarea {
 		width: 100%;
 		top: 0;
 		left: 0;
+		transform: translateX(-150%);
 		opacity: 0;
-		transition: opacity 1.2s linear, transform 1s ease-in-out;
+		transition: opacity 1.5s linear;
 
 		&--active {
 			opacity: 1;
+			transform: translateX(0%);
 		}
 	}
 
@@ -233,18 +236,17 @@ textarea {
 	&__btn {
 		margin: 0.5em 0;
 		padding: 0.5em 1.2em;
-		background-color: transparent;
+		background-color: colors.$main-font-color;
 		border: 2px solid colors.$main-font-color;
 		border-radius: 4px;
-		text-decoration: none;
-		font-size: 1.1rem;
+		font-size: 1.3rem;
+		color: colors.$h1-color;
 		font-weight: 600;
-		color: colors.$main-font-color;
 		transition: color 0.5s linear, background-color 0.5s linear;
 
 		&:hover {
-			background-color: colors.$main-font-color;
-			color: colors.$h1-color;
+			background-color: transparent;
+			color: colors.$main-font-color;
 		}
 	}
 
@@ -330,19 +332,14 @@ textarea {
 		margin: 0.5em 0;
 		padding: 0.5em 1.2em;
 		text-align: center;
-		background-color: transparent;
+		background-color: colors.$main-font-color;
 		border: 2px solid colors.$main-font-color;
 		border-radius: 4px;
 		text-decoration: none;
+		color: colors.$h1-color;
 		font-size: 1.1rem;
 		font-weight: 600;
-		color: colors.$main-font-color;
 		transition: color 0.5s linear, background-color 0.5s linear;
-
-		&:hover {
-			background-color: colors.$main-font-color;
-			color: colors.$h1-color;
-		}
 	}
 }
 
@@ -587,6 +584,10 @@ textarea {
 }
 
 @media (min-width: 810px) {
+	.headers-titles {
+		font-size: 1.6rem;
+	}
+
 	.header {
 		&__box {
 			justify-content: space-evenly;
@@ -621,7 +622,7 @@ textarea {
 			}
 
 			&--p {
-				padding: 1em 0.2em 1em 2em;
+				padding: 1em 0.4em 1em 2em;
 			}
 		}
 
@@ -629,6 +630,7 @@ textarea {
 			display: flex;
 			justify-content: center;
 			align-items: center;
+			margin-right: 2em;
 			cursor: pointer;
 		}
 
@@ -699,13 +701,29 @@ textarea {
 
 	.slider {
 		height: 700px;
+
 		&__slide-box {
 			flex-direction: row;
 		}
+
 		&__text-box {
 			width: 30%;
 			padding: 4em;
 		}
+
+		&__headers {
+			font-size: 1.8rem;
+		}
+
+		&__description {
+			padding: 1em 0;
+			font-size: 1.1rem;
+		}
+
+		&__btn {
+			font-size: 1.3rem;
+		}
+
 		&__img {
 			height: 100%;
 			width: 70px;
@@ -726,13 +744,37 @@ textarea {
 		}
 	}
 
+	.about {
+		padding: 4em 1em;
+
+		&__description {
+			padding: 2em;
+			font-size: 1.1rem;
+		}
+	}
+
 	.brand-slider {
+		padding: 4em 1em;
 		&__brand {
 			margin: 0 0;
 		}
 
+		&__description {
+			padding: 2em;
+			font-size: 1.1rem;
+		}
+
 		&__box {
 			animation: slideAnimation 50s linear infinite;
+		}
+
+		&__btn {
+			font-size: 1.3rem;
+
+			&:hover {
+				background-color: transparent;
+				color: colors.$main-font-color;
+			}
 		}
 	}
 
@@ -746,20 +788,27 @@ textarea {
 	}
 
 	.benefits {
+		padding: 4em 1em;
 		&__icons-box {
 			grid-template-columns: repeat(4, 1fr);
 			grid-template-rows: repeat(1, 1fr);
 		}
+
+		&__text {
+			font-size: 1.1rem;
+		}
 	}
 
 	// *** CONTACT FORM ***
-
-	.contact-wrapper {
-		display: flex;
-
-		.form-container {
+	.contact-section {
+		padding: 4em 0;
+		.contact-wrapper {
 			display: flex;
-			width: 70%;
+
+			.form-container {
+				display: flex;
+				width: 70%;
+			}
 		}
 	}
 
