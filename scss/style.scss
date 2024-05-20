@@ -256,6 +256,10 @@ textarea {
 		width: 100%;
 		height: 30%;
 		box-sizing: border-box;
+
+		&--desktop {
+			display: none;
+		}
 	}
 }
 
@@ -700,7 +704,7 @@ textarea {
 	}
 
 	.slider {
-		height: 700px;
+		height: 650px;
 
 		&__slide-box {
 			flex-direction: row;
@@ -727,6 +731,14 @@ textarea {
 		&__img {
 			height: 100%;
 			width: 70px;
+
+			&--mobile {
+				display: none;
+			}
+
+			&--desktop {
+				display: block;
+			}
 		}
 	}
 
@@ -766,6 +778,10 @@ textarea {
 
 		&__box {
 			animation: slideAnimation 50s linear infinite;
+		}
+
+		&__btn-box {
+			margin: 4em 0 1em;
 		}
 
 		&__btn {

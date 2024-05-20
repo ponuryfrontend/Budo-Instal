@@ -245,6 +245,9 @@ textarea {
   height: 30%;
   box-sizing: border-box;
 }
+.slider__img--desktop {
+  display: none;
+}
 
 .arrow {
   position: absolute;
@@ -606,7 +609,7 @@ textarea {
     display: none;
   }
   .slider {
-    height: 700px;
+    height: 650px;
   }
   .slider__slide-box {
     flex-direction: row;
@@ -628,6 +631,12 @@ textarea {
   .slider__img {
     height: 100%;
     width: 70px;
+  }
+  .slider__img--mobile {
+    display: none;
+  }
+  .slider__img--desktop {
+    display: block;
   }
   .arrow {
     top: 80%;
@@ -660,6 +669,9 @@ textarea {
   }
   .brand-slider__box {
     animation: slideAnimation 50s linear infinite;
+  }
+  .brand-slider__btn-box {
+    margin: 4em 0 1em;
   }
   .brand-slider__btn {
     font-size: 1.3rem;
