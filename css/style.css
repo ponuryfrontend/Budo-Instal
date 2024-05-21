@@ -228,7 +228,7 @@ textarea {
   background-color: #1f2d5a;
   border: 2px solid #1f2d5a;
   border-radius: 4px;
-  font-size: 1.3rem;
+  font-size: 1.15rem;
   color: rgb(255, 255, 255);
   font-weight: 600;
   transition: color 0.5s linear, background-color 0.5s linear;
@@ -253,7 +253,7 @@ textarea {
   position: absolute;
   top: 50%;
   font-size: 1.6rem;
-  color: #fff;
+  color: #1f2d5a;
   background: none;
   border: none;
   cursor: pointer;
@@ -269,7 +269,7 @@ textarea {
 
 .about {
   width: 100%;
-  padding: 0 1em 2em;
+  padding: 0 1em 3em;
 }
 .about__description {
   padding: 2em 2em 0;
@@ -279,7 +279,7 @@ textarea {
 .brand-slider {
   position: relative;
   width: 100%;
-  padding: 3em 1em 2em;
+  padding: 3em 1em;
   overflow: hidden;
 }
 .brand-slider__description {
@@ -288,7 +288,7 @@ textarea {
 }
 .brand-slider__box {
   display: flex;
-  margin: 2em 0;
+  margin: 3em 0;
   animation: slideAnimation 30s linear infinite;
 }
 .brand-slider__brand {
