@@ -325,7 +325,7 @@ textarea {
     transform: translateX(0%);
   }
   100% {
-    transform: translateX(-960%);
+    transform: translateX(-1000%);
   }
 }
 .benefits {
@@ -497,7 +497,7 @@ textarea {
       transform: translateX(0%);
     }
     100% {
-      transform: translateX(-780%);
+      transform: translateX(-850%);
     }
   }
 }
@@ -510,7 +510,7 @@ textarea {
       transform: translateX(0%);
     }
     100% {
-      transform: translateX(-720%);
+      transform: translateX(-780%);
     }
   }
 }
@@ -685,7 +685,7 @@ textarea {
       transform: translateX(0%);
     }
     100% {
-      transform: translateX(-310%);
+      transform: translateX(-380%);
     }
   }
   .benefits {
