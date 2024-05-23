@@ -4,6 +4,7 @@ const navBox = document.querySelector('.header__nav-desktop-box')
 const headerDropDownBox = document.querySelector('.header__drop-down-nav-box')
 const secondNav = document.querySelector('.header__second-nav-box')
 const plusIcon = document.querySelector('.header__drop-down-close-btn')
+const contactLink = document.querySelector('#forwardToContact')
 // Main slider
 let currentSlide = 0
 const slides = document.querySelectorAll('.slider__slide-box')
@@ -50,6 +51,11 @@ const closeDropDownMenu = () => {
 	plusIcon.classList.remove('header__drop-down-close-btn--rotate')
 }
 
+const closeMobileMenu = () => {
+	navMobile.classList.remove('nav-mobile--active')
+	document.body.classList.remove('lock-scroll')
+}
+
 // Header slider
 
 const showSlide = n => {
@@ -76,6 +82,7 @@ const handleCurrentYear = () => {
 }
 
 menuButton.addEventListener('click', showMobileMenu)
+contactLink.addEventListener('click', closeMobileMenu)
 secondNav.addEventListener('click', dropDownMenu)
 showSlide(currentSlide)
 startSlideShow()
