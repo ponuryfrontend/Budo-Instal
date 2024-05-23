@@ -396,7 +396,7 @@ textarea {
   width: 100%;
 }
 .contact-section .contact .contact-container .contact-wrapper .form-container .contact-form .contact-box .contact-input {
-  margin-bottom: 18px;
+  margin-bottom: 1.2em;
 }
 .contact-section .contact .contact-container .contact-wrapper .form-container .contact-form .contact-box .contact-textarea {
   resize: vertical;
@@ -417,36 +417,20 @@ textarea {
 }
 .contact-section .contact .contact-container .contact-wrapper .contact-btn {
   width: 100%;
-  margin: 0.5em 0;
+  margin: 1.2em 0;
   padding: 0.5em 1.2em;
-  background-color: transparent;
+  background-color: #1f2d5a;
   border: 2px solid #1f2d5a;
   border-radius: 4px;
   text-decoration: none;
   font-size: 1.1rem;
+  color: rgb(255, 255, 255);
   font-weight: 600;
-  color: #1f2d5a;
   transition: color 0.5s linear, background-color 0.5s linear;
 }
 .contact-section .contact .contact-container .contact-wrapper .contact-btn:hover {
-  background-color: #1f2d5a;
-  color: rgb(255, 255, 255);
-}
-.contact-section .contact .contact-container .contact-wrapper .newsletter-container {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  margin-top: 15px;
-}
-.contact-section .contact .contact-container .contact-wrapper .newsletter-container input[type=checkbox] {
-  background-color: #fff;
-  font: inherit;
-  width: 1.15em;
-  height: 1.15em;
-}
-.contact-section .contact .contact-container .contact-wrapper .newsletter-container .subscription {
-  padding-left: 15px;
-  font-size: 16px;
+  background-color: transparent;
+  color: #1f2d5a;
 }
 .contact-section .contact .contact-container .privacy-policy {
   padding: 35px 15px;

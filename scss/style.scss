@@ -438,7 +438,7 @@ textarea {
 							width: 100%;
 
 							.contact-input {
-								margin-bottom: 18px;
+								margin-bottom: 1.2em;
 							}
 
 							.contact-textarea {
@@ -465,40 +465,21 @@ textarea {
 
 				.contact-btn {
 					width: 100%;
-					margin: 0.5em 0;
+					margin: 1.2em 0;
 					padding: 0.5em 1.2em;
-					background-color: transparent;
+					background-color: colors.$main-font-color;
 					border: 2px solid colors.$main-font-color;
 					border-radius: 4px;
 					text-decoration: none;
 					font-size: 1.1rem;
+					color: colors.$h1-color;
 					font-weight: 600;
-					color: colors.$main-font-color;
 					transition: color 0.5s linear, background-color 0.5s linear;
 				}
-
+				
 				.contact-btn:hover {
-					background-color: colors.$main-font-color;
-					color: colors.$h1-color;
-				}
-
-				.newsletter-container {
-					display: flex;
-					flex-direction: row;
-					align-items: center;
-					margin-top: 15px;
-
-					input[type='checkbox'] {
-						background-color: #fff;
-						font: inherit;
-						width: 1.15em;
-						height: 1.15em;
-					}
-
-					.subscription {
-						padding-left: 15px;
-						font-size: 16px;
-					}
+					background-color: transparent;
+					color: colors.$main-font-color;
 				}
 			}
 
