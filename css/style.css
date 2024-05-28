@@ -407,7 +407,7 @@ textarea {
 .contact-section .contact .contact-container .contact-wrapper .form-container .contact-form .contact-box .contact-textarea {
   padding: 0.5em 0.8em;
   background: none;
-  border: 2px solid #1f2d5a;
+  border: 0.1em solid #1f2d5a;
   border-radius: 4px;
   outline: none;
   color: #1f2d5a;
@@ -420,7 +420,7 @@ textarea {
   margin: 1.2em 0;
   padding: 0.5em 1.2em;
   background-color: #1f2d5a;
-  border: 2px solid #1f2d5a;
+  border: 0.1em solid #1f2d5a;
   border-radius: 4px;
   text-decoration: none;
   font-size: 1.1rem;
